@@ -5,120 +5,50 @@
     <p class="subtitle">{{ vm.subtitle }}</p>
   </div>
 
-  <!-- Professional Experience -->
+  <!-- Projects Grid -->
   <section class="projects-section">
-    <h2 class="section-title">{{ vm.categories.professional }}</h2>
     <div class="projects-grid">
-      <div
-        class="project-card professional-card"
-        *ngFor="let project of vm.professional"
-        [ngClass]="{ featured: project.featured }"
-      >
+      <div class="project-card" *ngFor="let project of vm.projects">
         <div class="project-header">
           <h3 class="project-title">{{ project.title }}</h3>
-          <span class="project-period" *ngIf="project.period">{{
-            project.period
-          }}</span>
         </div>
 
-        <div class="company" *ngIf="project.company">
-          <span class="company-name">{{ project.company }}</span>
+        <div class="project-description">
+          <p>{{ project.shortDescription }}</p>
         </div>
-
-        <p class="project-description">{{ project.description }}</p>
 
         <div
-          class="highlights"
-          *ngIf="project.highlights && project.highlights.length > 0"
+          class="features"
+          *ngIf="project.features && project.features.length > 0"
         >
-          <h4 class="highlights-title">
-            {{ vm.highlightsTitles.professional }}
-          </h4>
-          <ul class="highlights-list">
-            <li
-              *ngFor="let highlight of project.highlights"
-              class="highlight-item"
-            >
-              {{ highlight }}
+          <h4 class="features-title">{{ vm.featuresTitle }}</h4>
+          <ul class="features-list">
+            <li *ngFor="let feature of project.features" class="feature-item">
+              {{ feature }}
             </li>
           </ul>
         </div>
 
-        <div class="technologies">
-          <span
-            *ngFor="let tech of project.technologies"
-            class="tech-tag"
-            [ngClass]="getTechnologyColor(tech)"
-          >
-            {{ tech }}
-          </span>
-        </div>
-
-        <div class="project-links" *ngIf="project.link">
-          <button class="link-button" (click)="openLink(project.link)">
-            🔗 Ver Projeto
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Personal Projects -->
-  <section class="projects-section">
-    <h2 class="section-title">{{ vm.categories.personal }}</h2>
-    <div class="projects-grid">
-      <div
-        class="project-card personal-card"
-        *ngFor="let project of vm.personal"
-        [ngClass]="{ featured: project.featured }"
-      >
-        <div class="project-header">
-          <h3 class="project-title">{{ project.title }}</h3>
-          <span class="featured-badge" *ngIf="project.featured"
-            >⭐ Destaque</span
-          >
-        </div>
-
-        <p class="project-description">{{ project.description }}</p>
-
         <div
-          class="highlights"
-          *ngIf="project.highlights && project.highlights.length > 0"
+          class="technologies"
+          *ngIf="project.skills && project.skills.length > 0"
         >
-          <h4 class="highlights-title">{{ vm.highlightsTitles.personal }}</h4>
-          <ul class="highlights-list">
-            <li
-              *ngFor="let highlight of project.highlights"
-              class="highlight-item"
-            >
-              {{ highlight }}
-            </li>
-          </ul>
-        </div>
-
-        <div class="technologies">
           <span
-            *ngFor="let tech of project.technologies"
+            *ngFor="let skill of project.skills"
             class="tech-tag"
-            [ngClass]="getTechnologyColor(tech)"
+            [ngClass]="getTechnologyColor(skill)"
           >
-            {{ tech }}
+            {{ skill }}
           </span>
         </div>
 
-        <div class="project-links">
+        <div class="project-links" *ngIf="project.links">
           <button
-            *ngIf="project.github"
+            *ngIf="project.links.github"
             class="link-button github-button"
-            (click)="openLink(project.github)"
+            (click)="openLink(project.links.github!)"
           >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              style="margin-right: 0.375rem"
-            >
+            <svg class="button-icon" viewBox="0 0 24 24" fill="currentColor">
               <path
                 d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
               />
@@ -126,69 +56,23 @@
             GitHub
           </button>
           <button
-            *ngIf="project.demo"
-            class="link-button demo-button"
-            (click)="openLink(project.demo)"
+            *ngIf="project.links.site"
+            class="link-button site-button"
+            (click)="openLink(project.links.site!)"
           >
             🌐 Demo
           </button>
           <button
-            *ngIf="project.api"
+            *ngIf="project.links.swagger"
             class="link-button swagger-button"
-            (click)="openLink(project.api)"
+            (click)="openLink(project.links.swagger!)"
           >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              style="margin-right: 0.375rem"
-            >
+            <svg class="button-icon" viewBox="0 0 24 24" fill="currentColor">
               <path
                 d="M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12 12-5.383 12-12S18.617 0 12 0zm0 1C18.065 1 23 5.935 23 12S18.065 23 12 23 1 18.065 1 12 5.935 1 12 1zm0 2.5c-5.247 0-9.5 4.253-9.5 9.5s4.253 9.5 9.5 9.5 9.5-4.253 9.5-9.5-4.253-9.5-9.5-9.5zm0 1c4.694 0 8.5 3.806 8.5 8.5s-3.806 8.5-8.5 8.5-8.5-3.806-8.5-8.5 3.806-8.5 8.5-8.5zm-4.5 6c0-1.381 1.119-2.5 2.5-2.5h4c1.381 0 2.5 1.119 2.5 2.5v2c0 1.381-1.119 2.5-2.5 2.5H12v1.5h2.5c.276 0 .5.224.5.5s-.224.5-.5.5h-5c-.276 0-.5-.224-.5-.5s.224-.5.5-.5H12V13H10c-1.381 0-2.5-1.119-2.5-2.5v-2zm1 0v2c0 .827.673 1.5 1.5 1.5h4c.827 0 1.5-.673 1.5-1.5v-2c0-.827-.673-1.5-1.5-1.5H10c-.827 0-1.5.673-1.5 1.5z"
               />
             </svg>
-            Swagger
-          </button>
-          <button
-            *ngIf="project.link"
-            class="link-button"
-            (click)="openLink(project.link)"
-          >
-            🔗 Ver Projeto
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Freelance Projects -->
-  <section class="projects-section">
-    <h2 class="section-title">{{ vm.categories.freelance }}</h2>
-    <div class="projects-grid">
-      <div
-        class="project-card freelance-card"
-        *ngFor="let project of vm.freelance"
-      >
-        <div class="project-header">
-          <h3 class="project-title">{{ project.title }}</h3>
-        </div>
-
-        <p class="project-description">{{ project.description }}</p>
-
-        <div class="technologies">
-          <span
-            *ngFor="let tech of project.technologies"
-            class="tech-tag"
-            [ngClass]="getTechnologyColor(tech)"
-          >
-            {{ tech }}
-          </span>
-        </div>
-
-        <div class="project-links" *ngIf="project.link">
-          <button class="link-button" (click)="openLink(project.link)">
-            🔗 Ver Site
+            API Docs
           </button>
         </div>
       </div>

@@ -19,6 +19,12 @@
     "description": "Desenvolvedor backend apaixonado por tecnologias .NET. Adoro criar APIs robustas e soluções escaláveis que resolvem problemas do mundo real."
   },
 
+  "projectsPage": {
+    "title": "Meus Projetos",
+    "subtitle": "Uma seleção dos projetos que desenvolvi ao longo da minha carreira",
+    "featuresTitle": "Principais Características"
+  },
+
   "projects": [
     {
       "id": "popculturemashup",

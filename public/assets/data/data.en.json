@@ -19,6 +19,12 @@
     "description": "Passionate backend developer specializing in .NET technologies. I love creating robust APIs and scalable solutions that solve real-world problems."
   },
 
+  "projectsPage": {
+    "title": "My Projects",
+    "subtitle": "A selection of projects I've developed throughout my career",
+    "featuresTitle": "Key Features"
+  },
+
   "projects": [
     {
       "id": "popculturemashup",

@@ -415,3 +415,94 @@
     justify-content: center;
   }
 }
+
+/* Melhorias de espaçamento */
+.project-header {
+  margin-bottom: 1.25rem;
+}
+
+.project-description {
+  margin-bottom: 1.5rem;
+}
+
+.features {
+  margin-bottom: 1.75rem;
+}
+
+.features-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: rgba(15, 23, 42, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+  border: 1px solid rgba(51, 65, 85, 0.4);
+}
+
+.feature-item {
+  font-size: 0.875rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.feature-item:last-child {
+  margin-bottom: 0;
+}
+
+.feature-item::before {
+  content: "▸";
+  color: #3b82f6;
+  font-weight: 600;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.technologies {
+  margin-bottom: 1.75rem;
+  padding-top: 0.5rem;
+}
+
+.project-links {
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+/* Ícones dos botões */
+.button-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* Ajustar cards para melhor organização */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
+}
+
+.project-card .project-description {
+  flex-grow: 0;
+}
+
+.project-card .features {
+  flex-grow: 1;
+}
+
+.project-card .project-links {
+  margin-top: auto;
+}
