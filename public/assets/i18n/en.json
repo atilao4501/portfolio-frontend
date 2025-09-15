@@ -1,0 +1,14 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "common": {
+    "download_cv": "Download CV",
+    "menu": "Menu",
+    "close": "Close"
+  }
+}

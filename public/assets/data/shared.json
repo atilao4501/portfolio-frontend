@@ -1,0 +1,74 @@
+{
+  "personal": {
+    "name": "Átila F. Alcântara",
+    "brand": "atilao45"
+  },
+  "links": {
+    "github": "https://github.com/atilao4501",
+    "linkedin": "https://www.linkedin.com/in/atilaalcantara/",
+    "cv": "/assets/cv/atila-cv.pdf"
+  },
+  "contact": {
+    "email": "contato@atilaalcantara.dev",
+    "whatsapp": "+5575999999999"
+  },
+  "stack": [".NET", "C#", "EF Core", "PostgreSQL", "Angular"],
+  "projects": [
+    {
+      "id": "popculturemashup",
+      "name": "PopCultureMashup",
+      "stack": [".NET 8", "EF Core"],
+      "links": {
+        "github": "https://github.com/atilao4501/PopCultureMashup"
+      }
+    }
+  ],
+  "corporate": [
+    {
+      "id": "invillia-bradesco",
+      "company": "Invillia / Bradesco P2",
+      "period": "2024–2025",
+      "stack": [".NET", "MongoDB", "PostgreSQL"]
+    }
+  ],
+  "freelance": [
+    {
+      "id": "adriane-joias",
+      "name": "M. Adriane Joias"
+    }
+  ],
+  "education": [
+    {
+      "id": "faseb-psychology",
+      "institution": "FASEB",
+      "period": "Atual"
+    }
+  ],
+  "certifications": [
+    {
+      "id": "azure-fundamentals",
+      "name": "Azure Fundamentals",
+      "issuer": "Microsoft",
+      "year": "2024"
+    }
+  ],
+  "skills": {
+    "backend": [
+      { "name": ".NET", "level": "advanced" },
+      { "name": "C#", "level": "advanced" },
+      { "name": "EF Core", "level": "advanced" },
+      { "name": "PostgreSQL", "level": "intermediate" },
+      { "name": "MongoDB", "level": "intermediate" }
+    ],
+    "frontend": [
+      { "name": "Angular", "level": "intermediate" },
+      { "name": "TypeScript", "level": "intermediate" },
+      { "name": "HTML/CSS", "level": "advanced" }
+    ],
+    "tools": [
+      { "name": "Git", "level": "advanced" },
+      { "name": "Docker", "level": "intermediate" },
+      { "name": "Azure", "level": "beginner" }
+    ]
+  }
+}

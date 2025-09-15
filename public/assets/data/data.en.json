@@ -1,0 +1,67 @@
+{
+  "navbar": {
+    "menu": {
+      "home": "Home",
+      "about": "About",
+      "skills": "Skills",
+      "projects": "Projects",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "title": "Backend .NET Developer",
+    "summary": "I build reliable APIs and integrations."
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Passionate backend developer specializing in .NET technologies. I love creating robust APIs and scalable solutions that solve real-world problems."
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "categories": {
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "tools": "Tools & Others"
+    },
+    "levels": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "popculturemashup": {
+      "description": "Cross-media recommendation system (games & books) built with .NET 8"
+    }
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "corporate": "Corporate Experience",
+    "freelance": "Freelance Projects",
+    "invillia-bradesco": {
+      "role": "Backend .NET Developer",
+      "description": "Developed voucher microservices and integrations"
+    },
+    "adriane-joias": {
+      "description": "WooCommerce store with dark luxury theme"
+    }
+  },
+  "education": {
+    "title": "Education",
+    "faseb-psychology": {
+      "course": "Psychology (Teaching & Practice)",
+      "status": "Current"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's work together on your next project",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "navbar": {
+    "menu": {
+      "home": "Início",
+      "about": "Sobre",
+      "skills": "Habilidades",
+      "projects": "Projetos",
+      "contact": "Contato"
+    }
+  },
+  "hero": {
+    "title": "Desenvolvedor Backend .NET",
+    "summary": "Construo APIs e integrações robustas."
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "description": "Desenvolvedor backend apaixonado por tecnologias .NET. Adoro criar APIs robustas e soluções escaláveis que resolvem problemas do mundo real."
+  },
+  "skills": {
+    "title": "Habilidades Técnicas",
+    "categories": {
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "tools": "Ferramentas e Outros"
+    },
+    "levels": {
+      "beginner": "Iniciante",
+      "intermediate": "Intermediário",
+      "advanced": "Avançado"
+    }
+  },
+  "projects": {
+    "title": "Projetos",
+    "popculturemashup": {
+      "description": "Sistema de recomendação cross-mídia (games e livros) construído com .NET 8"
+    }
+  },
+  "experience": {
+    "title": "Experiência Profissional",
+    "corporate": "Experiência Corporativa",
+    "freelance": "Projetos Freelance",
+    "invillia-bradesco": {
+      "role": "Desenvolvedora Backend .NET",
+      "description": "Desenvolvi microsserviços de voucher e integrações"
+    },
+    "adriane-joias": {
+      "description": "Loja WooCommerce com tema dark luxury"
+    }
+  },
+  "education": {
+    "title": "Formação",
+    "faseb-psychology": {
+      "course": "Psicologia (Docência e Prática)",
+      "status": "Atual"
+    }
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Vamos trabalhar juntos no seu próximo projeto",
+    "form": {
+      "name": "Nome",
+      "email": "E-mail",
+      "message": "Mensagem",
+      "send": "Enviar Mensagem"
+    }
+  }
+}

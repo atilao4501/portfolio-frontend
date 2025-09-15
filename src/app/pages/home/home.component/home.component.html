@@ -1,0 +1,38 @@
+<section class="container hero" *ngIf="vm$ | async as vm">
+  <p class="muted">{{ "nav.home" | translate }}</p>
+  <h1>{{ vm.name }}</h1>
+  <p>
+    <strong>{{ vm.title }}</strong>
+  </p>
+  <p>{{ vm.summary }}</p>
+
+  <div class="actions">
+    <a
+      *ngIf="vm.links?.github"
+      class="btn"
+      [href]="vm.links?.github"
+      target="_blank"
+      rel="noreferrer"
+    >
+      GitHub
+    </a>
+    <a
+      *ngIf="vm.links?.linkedin"
+      class="btn"
+      [href]="vm.links?.linkedin"
+      target="_blank"
+      rel="noreferrer"
+    >
+      LinkedIn
+    </a>
+    <a
+      *ngIf="vm.links?.cv"
+      class="btn primary"
+      [href]="vm.links?.cv"
+      target="_blank"
+      rel="noreferrer"
+    >
+      {{ "common.download_cv" | translate }}
+    </a>
+  </div>
+</section>

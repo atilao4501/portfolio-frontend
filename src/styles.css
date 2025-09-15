@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* ===== RESET E ESTILOS GLOBAIS ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #e6ecf2;
+  background-color: #0b1220;
+  /* Compensar navbar fixa */
+  padding-top: 4rem;
+}
+
+/* Estilos para redução de movimento */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

@@ -1,0 +1,29 @@
+.hero {
+  padding: 48px 24px;
+  display: grid;
+  gap: 12px;
+}
+.hero h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+.muted {
+  color: var(--muted);
+}
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+.btn {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--fg);
+}
+.btn.primary {
+  background: var(--brand);
+  color: #001014;
+  border-color: transparent;
+}
