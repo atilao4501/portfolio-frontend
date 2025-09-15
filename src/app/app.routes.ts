@@ -9,6 +9,14 @@ export const routes: Routes = [
       ),
     title: 'Home',
   },
+  {
+    path: 'skills',
+    loadComponent: () =>
+      import('./pages/skills/skill.component/skill.component').then(
+        (m) => m.SkillComponent
+      ),
+    title: 'Skills',
+  },
   //   {
   //     path: 'projects',
   //     loadComponent: () =>

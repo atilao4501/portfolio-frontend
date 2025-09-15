@@ -1,0 +1,26 @@
+<div class="skills-container" *ngIf="vm$ | async as vm">
+  <div class="skills-content">
+    <!-- Header -->
+    <div class="skills-header">
+      <h1 class="skills-title">{{ vm.title }}</h1>
+    </div>
+
+    <!-- Categories -->
+    <div class="skills-categories">
+      <div class="skill-category" *ngFor="let category of vm.categories">
+        <h2 class="category-title">{{ category.title }}</h2>
+
+        <div class="skills-grid">
+          <div
+            class="skill-card"
+            *ngFor="let skill of category.skills"
+            [style.--skill-color]="skill.color"
+          >
+            <div class="skill-icon">{{ skill.icon }}</div>
+            <h3 class="skill-name">{{ skill.name }}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
