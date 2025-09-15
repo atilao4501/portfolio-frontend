@@ -50,9 +50,135 @@
   },
   "projects": {
     "title": "Projects",
-    "popculturemashup": {
-      "description": "Cross-media recommendation system (games & books) built with .NET 8"
-    }
+    "subtitle": "Some of the projects I've developed",
+    "categories": {
+      "professional": "Professional Experience",
+      "personal": "Personal Projects",
+      "freelance": "Freelance Projects"
+    },
+    "highlightsTitles": {
+      "professional": "Key Contributions:",
+      "personal": "Main Features:",
+      "freelance": "Key Deliverables:"
+    },
+    "professional": [
+      {
+        "id": "invillia-casas-bahia",
+        "title": "Backend Developer (.NET) - Invillia (Casas Bahia)",
+        "period": "Jun/2025 - Currently",
+        "company": "Invillia - Casas Bahia Group",
+        "description": "Working in a high-criticality environment for Brazil's largest retailers (Casas Bahia, Ponto, Extra), developing essential microservices for e-commerce and financial integrations.",
+        "highlights": [
+          "Omnichannel Voucher: Development and production deployment of functionality that unifies voucher usage across all sales channels",
+          "Banking Integrations: Maintenance of integrations with Bradesco and Itaú for secure transactions",
+          "Partner Card Creation: API for managing co-branded credit cards"
+        ],
+        "technologies": [
+          ".NET 8",
+          "Microservices",
+          "Clean Architecture",
+          "Kafka",
+          "Redis",
+          "Serilog",
+          "xUnit",
+          "Kubernetes",
+          "Dynatrace",
+          "Grafana"
+        ],
+        "type": "corporate"
+      },
+      {
+        "id": "gav-resorts",
+        "title": "Full Stack Developer & IT - GAV Resorts",
+        "period": "Oct/2022 - Jun/2025",
+        "company": "GAV Resorts",
+        "description": "Evolved from IT support to developer, participating in building the GAV Customer Portal, a self-service platform for thousands of customers.",
+        "highlights": [
+          "RESTful API construction for invoice, statement, and appointment queries",
+          "Strategic migration from SQL Server to PostgreSQL",
+          "Redis cache implementation for performance optimization",
+          "Docker containerization for environment standardization"
+        ],
+        "technologies": [
+          ".NET (6-8)",
+          "ASP.NET Core",
+          "EF Core",
+          "SQL Server",
+          "PostgreSQL",
+          "Redis",
+          "JWT/Identity",
+          "Docker",
+          "CI/CD"
+        ],
+        "type": "corporate",
+        "link": "https://portalcliente.gavresorts.com.br"
+      }
+    ],
+    "personal": [
+      {
+        "id": "popculturemashup",
+        "title": "PopCultureMashup - Cross-Media Recommendation API",
+        "description": "Robust recommendation system API that provides personalized game and book suggestions based on user preferences, following Clean Architecture principles.",
+        "highlights": [
+          "Cross-Media Intelligence: Recommends games based on favorite books and vice-versa",
+          "Resilient integrations with RAWG (games) and OpenLibrary (books) APIs",
+          "Complete authentication system with JWT and Refresh Tokens",
+          "Fully containerized with Docker Compose"
+        ],
+        "technologies": [
+          ".NET 8",
+          "Clean Architecture",
+          "SQL Server",
+          "Entity Framework Core",
+          "ASP.NET Core Identity",
+          "JWT",
+          "Docker",
+          "xUnit",
+          "Swagger/OpenAPI"
+        ],
+        "github": "https://github.com/atilao4501/PopCultureMashup",
+        "featured": true
+      },
+      {
+        "id": "andreia-ferreira-clinic",
+        "title": "Andreia Ferreira Clinic - Appointment API",
+        "description": "RESTful API for managing clinic appointment scheduling, prepared to serve as backend for web or mobile applications.",
+        "technologies": ["ASP.NET Core", "EF Core", "SQL Server", "Docker"],
+        "github": "https://github.com/atilao4501/AndreiaFerreiraClinica"
+      },
+      {
+        "id": "pairprogress",
+        "title": "PairProgress - Full Stack Productivity App",
+        "description": "Productivity application combining .NET backend with Angular frontend, demonstrating full stack capabilities.",
+        "technologies": [".NET", "ASP.NET Core", "Angular", "SQL Server"],
+        "github": "https://github.com/atilao4501/PairProgress.Backend",
+        "demo": "https://atilao4501.github.io/PairProgress/",
+        "api": "https://pairprogress.runasp.net/swagger/index.html"
+      },
+      {
+        "id": "ecosync",
+        "title": "EcoSync - Environmental Monitoring API",
+        "description": "Conceptual API project for receiving and processing environmental sensor data.",
+        "technologies": ["ASP.NET Core", "RESTful APIs"],
+        "github": "https://github.com/atilao4501/EcoSync"
+      }
+    ],
+    "freelance": [
+      {
+        "id": "m-adriane",
+        "title": "M.Adriane - E-commerce Solution",
+        "description": "Complete technical implementation of online store, from domain configuration to payment gateway integration.",
+        "link": "https://madriane.com.br/",
+        "technologies": ["WooCommerce", "WordPress", "Payment Gateways"]
+      },
+      {
+        "id": "arte-doce",
+        "title": "Arte Doce Amigurumis - Sales Platform",
+        "description": "Development of digital sales channel to expand the reach of handcrafted products online.",
+        "link": "https://artedoce.fivecard.com.br/",
+        "technologies": ["E-commerce Platform", "Payment Integration"]
+      }
+    ]
   },
   "experience": {
     "title": "Professional Experience",

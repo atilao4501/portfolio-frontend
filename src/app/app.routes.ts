@@ -17,6 +17,14 @@ export const routes: Routes = [
       ),
     title: 'Skills',
   },
+  {
+    path: 'projects',
+    loadComponent: () =>
+      import('./pages/projects/projects.component/projects.component').then(
+        (m) => m.ProjectsComponent
+      ),
+    title: 'Projects',
+  },
   //   {
   //     path: 'projects',
   //     loadComponent: () =>
