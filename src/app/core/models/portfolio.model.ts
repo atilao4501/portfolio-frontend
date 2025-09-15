@@ -13,6 +13,7 @@ export interface SharedData {
   personal: {
     name: string;
     brand: string;
+    githubUsername: string;
   };
   links: LinkMap;
   contact: {
