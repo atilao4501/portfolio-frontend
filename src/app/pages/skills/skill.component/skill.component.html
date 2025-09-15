@@ -11,15 +11,17 @@
         <h2 class="category-title">{{ category.title }}</h2>
 
         <div class="skills-grid">
-          <div
-            class="skill-card"
-            *ngFor="let skill of category.skills"
-            [style.--skill-color]="skill.color"
-          >
-            <div class="skill-icon">
-              <i [class]="skill.icon" [style.color]="skill.color"></i>
+          <div class="skill-card" *ngFor="let skill of category.skills">
+            <img
+              [src]="skill.svg"
+              [alt]="skill.name"
+              loading="lazy"
+              height="40"
+            />
+            <div class="skill-text">
+              <h3 class="skill-name">{{ skill.name }}</h3>
+              <p class="skill-meta">{{ skill.type }} • {{ skill.level }}</p>
             </div>
-            <h3 class="skill-name">{{ skill.name }}</h3>
           </div>
         </div>
       </div>

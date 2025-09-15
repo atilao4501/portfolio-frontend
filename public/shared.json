@@ -4,25 +4,20 @@
     "brand": "Átila F. Alcântara",
     "githubUsername": "atilao4501"
   },
-
   "links": {
     "github": "https://github.com/atilao4501",
     "linkedin": "https://www.linkedin.com/in/atilaalcantara/",
     "cv": "/assets/cv/atila-cv.pdf"
   },
-
   "contact": {
     "email": "atilafa2012@hotmail.com",
     "whatsapp": "+5575999999999"
   },
-
   "projects": [
     {
       "id": "popculturemashup",
       "skills": ["dotnet", "efcore", "sqlserver", "docker"],
-      "links": {
-        "github": "https://github.com/atilao4501/PopCultureMashup"
-      }
+      "links": { "github": "https://github.com/atilao4501/PopCultureMashup" }
     },
     {
       "id": "pairprogress",
@@ -84,20 +79,10 @@
         "docker"
       ]
     },
-    {
-      "id": "ecosync",
-      "skills": ["dotnet", "aspnetcore"]
-    },
-    {
-      "id": "m-adriane-ecommerce",
-      "skills": ["wordpress", "woocommerce"]
-    },
-    {
-      "id": "arte-doce-amigurumis",
-      "skills": ["wordpress", "woocommerce"]
-    }
+    { "id": "ecosync", "skills": ["dotnet", "aspnetcore"] },
+    { "id": "m-adriane-ecommerce", "skills": ["wordpress", "woocommerce"] },
+    { "id": "arte-doce-amigurumis", "skills": ["wordpress", "woocommerce"] }
   ],
-
   "corporate": [
     {
       "id": "invillia-bradesco",
@@ -119,20 +104,13 @@
       "skills": ["dotnet", "sqlserver", "postgresql", "redis"]
     }
   ],
-
   "freelance": [
     { "id": "adriane-joias", "name": "M. Adriane Joias" },
     { "id": "arte-doce", "name": "Arte Doce Amigurumis" }
   ],
-
   "education": [
-    {
-      "id": "faseb-psychology",
-      "institution": "FASEB",
-      "period": "Atual"
-    }
+    { "id": "faseb-psychology", "institution": "FASEB", "period": "Atual" }
   ],
-
   "certifications": [
     {
       "id": "azure-fundamentals",
@@ -141,7 +119,6 @@
       "year": "2024"
     }
   ],
-
   "skills": {
     "backend": [
       {

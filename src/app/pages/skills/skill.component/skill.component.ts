@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Observable, map } from 'rxjs';
-import { AssetsDataService } from '../../../core/services/data.assets.service';
+import { PortfolioDataService } from '../../../core/services/portfolio-data.service';
+import { Skill } from '../../../core/models/skill.model';
 
 interface SkillItem {
   name: string;
-  icon: string;
-  color: string;
+  svg: string;
+  type: string;
+  level: string;
 }
 
 interface SkillCategory {
@@ -131,40 +133,25 @@ export class SkillComponent implements OnInit {
 
   vm$!: Observable<SkillsViewModel>;
 
-  constructor(private assetsDataService: AssetsDataService) {}
+  constructor(private data: PortfolioDataService) {}
 
   ngOnInit(): void {
-    this.vm$ = this.assetsDataService.getData$().pipe(
-      map((data: any) => {
-        const categories: SkillCategory[] = [];
-        const skillsData = data.skills.categories;
-
-        // Mapear cada categoria do novo formato
-        Object.keys(skillsData).forEach((categoryKey) => {
-          const skills = skillsData[categoryKey];
-          if (Array.isArray(skills) && skills.length > 0) {
-            categories.push({
-              title: this.getCategoryTitle(categoryKey),
-              skills: skills.map((skillName: string) => ({
-                name: skillName,
-                icon: this.iconMap[skillName] || this.getDefaultIcon(),
-                color:
-                  this.colorMap[skillName] || this.getDefaultColor(categoryKey),
-              })),
-            });
-          }
-        });
-
-        return {
-          title: data.skills.title,
-          categories: categories,
-        };
+    this.vm$ = this.data.getSkillsGrouped().pipe(
+      map((grouped) => {
+        const categories: SkillCategory[] = Object.entries(grouped).map(
+          ([key, arr]) => ({
+            title: this.getCategoryTitle(key),
+            skills: arr.map((s: Skill) => ({
+              name: s.name,
+              svg: s.svg.url,
+              type: s.type,
+              level: s.level,
+            })),
+          })
+        );
+        return { title: 'Skills', categories };
       })
     );
-  }
-
-  private getDefaultIcon(): string {
-    return 'devicon-devicon-plain'; // Ícone padrão do Devicon
   }
 
   private getCategoryTitle(categoryKey: string): string {
@@ -188,18 +175,6 @@ export class SkillComponent implements OnInit {
   }
 
   private getDefaultColor(categoryKey: string): string {
-    const defaultColors: Record<string, string> = {
-      backend: '#7C3AED',
-      databases: '#3B82F6',
-      messaging: '#F97316',
-      devops: '#06B6D4',
-      observability: '#10B981',
-      testing: '#FBBF24',
-      frontend: '#EF4444',
-      tools: '#6B7280',
-      os: '#8B5A2B',
-    };
-
-    return defaultColors[categoryKey] || '#64748B';
+    return '#64748B';
   }
 }

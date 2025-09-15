@@ -1,0 +1,212 @@
+{
+  "navbar": {
+    "menu": {
+      "home": "Início",
+      "about": "Sobre",
+      "skills": "Habilidades",
+      "projects": "Projetos",
+      "contact": "Contato"
+    }
+  },
+  "hero": {
+    "title": "Desenvolvedor Backend | Cientista da Computação",
+    "summary": "Construo APIs e integrações robustas."
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "description": "Desenvolvedor backend apaixonado por tecnologias .NET. Adoro criar APIs robustas e soluções escaláveis que resolvem problemas do mundo real."
+  },
+  "skills": {
+    "title": "Habilidades Técnicas",
+    "categories": {
+      "backend": [
+        ".NET",
+        "ASP.NET Core",
+        "Entity Framework Core (EF Core)",
+        "APIs RESTful",
+        "Clean Architecture",
+        "JWT / Identity",
+        "Swagger / OpenAPI"
+      ],
+      "databases": ["SQL Server", "PostgreSQL", "Redis (cache distribuído)"],
+      "messaging": ["Kafka (mensageria assíncrona)"],
+      "devops": [
+        "Docker / Docker Compose",
+        "Kubernetes (Lens)",
+        "CI/CD pipelines",
+        "Git Flow"
+      ],
+      "observability": ["Serilog (logs estruturados)", "Dynatrace", "Grafana"],
+      "testing": ["xUnit", "Testes automatizados (mocks/stubs)"],
+      "frontend": ["Angular"],
+      "tools": ["Metodologias Ágeis (Scrum/Kanban)"],
+      "os": ["Windows", "macOS", "Linux"]
+    },
+    "levels": {
+      "beginner": "Iniciante",
+      "intermediate": "Intermediário",
+      "advanced": "Avançado"
+    }
+  },
+  "projects": {
+    "title": "Projetos",
+    "subtitle": "Alguns dos projetos que desenvolvi",
+    "categories": {
+      "professional": "Experiência Profissional",
+      "personal": "Projetos Pessoais",
+      "freelance": "Projetos Freelance"
+    },
+    "highlightsTitles": {
+      "professional": "Principais Contribuições:",
+      "personal": "Funcionalidades Principais:",
+      "freelance": "Principais Entregas:"
+    },
+    "professional": [
+      {
+        "id": "invillia-casas-bahia",
+        "title": "Desenvolvedor Backend (.NET) - Invillia (Casas Bahia)",
+        "period": "jun/2025 - Atualmente",
+        "company": "Invillia - Grupo Casas Bahia",
+        "description": "Atuando em ambiente de alta criticidade para as maiores varejistas do Brasil (Casas Bahia, Ponto, Extra), desenvolvendo microsserviços essenciais para e-commerce e integrações financeiras.",
+        "highlights": [
+          "Voucher Omnichannel: Desenvolvimento e deploy da funcionalidade que unifica o uso de vouchers em todos os canais de venda",
+          "Integrações Bancárias: Manutenção das integrações com Bradesco e Itaú para transações seguras",
+          "Criação de Cartão Parceiro: API para gestão de cartões de crédito co-branded"
+        ],
+        "technologies": [
+          ".NET 8",
+          "Microsserviços",
+          "Clean Architecture",
+          "Kafka",
+          "Redis",
+          "Serilog",
+          "xUnit",
+          "Kubernetes",
+          "Dynatrace",
+          "Grafana"
+        ],
+        "type": "corporate"
+      },
+      {
+        "id": "gav-resorts",
+        "title": "Desenvolvedor Full Stack & TI - GAV Resorts",
+        "period": "out/2022 - jun/2025",
+        "company": "GAV Resorts",
+        "description": "Evolução de suporte em TI para desenvolvedor, participando da construção do Portal do Cliente GAV, plataforma de autoatendimento para milhares de clientes.",
+        "highlights": [
+          "Construção de APIs RESTful para consulta de faturas, extratos e agendamentos",
+          "Migração estratégica do SQL Server para PostgreSQL",
+          "Implementação de cache com Redis para otimização de performance",
+          "Conteinerização com Docker para padronização de ambientes"
+        ],
+        "technologies": [
+          ".NET (6-8)",
+          "ASP.NET Core",
+          "EF Core",
+          "SQL Server",
+          "PostgreSQL",
+          "Redis",
+          "JWT/Identity",
+          "Docker",
+          "CI/CD"
+        ],
+        "type": "corporate",
+        "link": "https://portalcliente.gavresorts.com.br"
+      }
+    ],
+    "personal": [
+      {
+        "id": "popculturemashup",
+        "title": "PopCultureMashup - API de Recomendação Cross-Media",
+        "description": "API robusta de sistema de recomendação que fornece sugestões personalizadas de jogos e livros baseadas nas preferências do usuário, seguindo Clean Architecture.",
+        "highlights": [
+          "Inteligência Cross-Media: Recomenda jogos baseado em livros preferidos e vice-versa",
+          "Integrações resilientes com APIs RAWG (jogos) e OpenLibrary (livros)",
+          "Sistema completo de autenticação com JWT e Refresh Tokens",
+          "Totalmente conteinerizado com Docker Compose"
+        ],
+        "technologies": [
+          ".NET 8",
+          "Clean Architecture",
+          "SQL Server",
+          "Entity Framework Core",
+          "ASP.NET Core Identity",
+          "JWT",
+          "Docker",
+          "xUnit",
+          "Swagger/OpenAPI"
+        ],
+        "github": "https://github.com/atilao4501/PopCultureMashup",
+        "featured": true
+      },
+      {
+        "id": "andreia-ferreira-clinic",
+        "title": "Andreia Ferreira Clinic - API de Agendamento",
+        "description": "API RESTful para gerenciar agendamento de consultas de uma clínica, preparada para servir como backend para aplicações web ou mobile.",
+        "technologies": ["ASP.NET Core", "EF Core", "SQL Server", "Docker"],
+        "github": "https://github.com/atilao4501/AndreiaFerreiraClinica"
+      },
+      {
+        "id": "pairprogress",
+        "title": "PairProgress - Aplicação de Produtividade Full Stack",
+        "description": "Aplicação de produtividade combinando backend .NET com frontend Angular, demonstrando capacidade full stack.",
+        "technologies": [".NET", "ASP.NET Core", "Angular", "SQL Server"],
+        "github": "https://github.com/atilao4501/PairProgress.Backend",
+        "demo": "https://atilao4501.github.io/PairProgress/",
+        "api": "https://pairprogress.runasp.net/swagger/index.html"
+      },
+      {
+        "id": "ecosync",
+        "title": "EcoSync - API para Monitoramento Ambiental",
+        "description": "Projeto conceitual de API para receber e processar dados de sensores ambientais.",
+        "technologies": ["ASP.NET Core", "RESTful APIs"],
+        "github": "https://github.com/atilao4501/EcoSync"
+      }
+    ],
+    "freelance": [
+      {
+        "id": "m-adriane",
+        "title": "M.Adriane - Solução E-commerce",
+        "description": "Implementação técnica completa da loja virtual, desde configuração de domínio até integração de gateways de pagamento.",
+        "link": "https://madriane.com.br/",
+        "technologies": ["WooCommerce", "WordPress", "Payment Gateways"]
+      },
+      {
+        "id": "arte-doce",
+        "title": "Arte Doce Amigurumis - Plataforma de Vendas",
+        "description": "Desenvolvimento do canal de vendas digital para expansão do alcance de produtos artesanais online.",
+        "link": "https://artedoce.fivecard.com.br/",
+        "technologies": ["E-commerce Platform", "Payment Integration"]
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experiência Profissional",
+    "corporate": "Experiência Corporativa",
+    "freelance": "Projetos Freelance",
+    "invillia-bradesco": {
+      "role": "Desenvolvedora Backend .NET",
+      "description": "Desenvolvi microsserviços de voucher e integrações"
+    },
+    "adriane-joias": {
+      "description": "Loja WooCommerce com tema dark luxury"
+    }
+  },
+  "education": {
+    "title": "Formação",
+    "faseb-psychology": {
+      "course": "Psicologia (Docência e Prática)",
+      "status": "Atual"
+    }
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Vamos trabalhar juntos no seu próximo projeto",
+    "form": {
+      "name": "Nome",
+      "email": "E-mail",
+      "message": "Mensagem",
+      "send": "Enviar Mensagem"
+    }
+  }
+}

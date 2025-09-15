@@ -8,17 +8,14 @@
       "contact": "Contact"
     }
   },
-
   "hero": {
     "title": "Backend Developer | Computer Scientist",
     "summary": "I build reliable APIs and integrations."
   },
-
   "about": {
     "title": "About Me",
     "description": "Passionate backend developer specializing in .NET technologies. I love creating robust APIs and scalable solutions that solve real-world problems."
   },
-
   "projects": [
     {
       "id": "popculturemashup",
@@ -118,12 +115,10 @@
       "features": ["Product catalog configuration", "Payment methods setup"]
     }
   ],
-
   "skills": {
     "title": "Technical Skills",
     "description": "Some of the main technologies and tools I use on a daily basis."
   },
-
   "contact": {
     "title": "Get in Touch",
     "subtitle": "Let's work together on your next project",

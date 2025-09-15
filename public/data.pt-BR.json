@@ -8,17 +8,14 @@
       "contact": "Contato"
     }
   },
-
   "hero": {
     "title": "Desenvolvedor Backend | Cientista da Computação",
     "summary": "Construo APIs e integrações confiáveis."
   },
-
   "about": {
     "title": "Sobre Mim",
     "description": "Desenvolvedor backend apaixonado por tecnologias .NET. Adoro criar APIs robustas e soluções escaláveis que resolvem problemas do mundo real."
   },
-
   "projects": [
     {
       "id": "popculturemashup",
@@ -54,7 +51,7 @@
     {
       "id": "invillia-voucher-omnichannel",
       "title": "Voucher Omnichannel (Grupo Casas Bahia)",
-      "shortDescription": "Permite que um único voucher seja utilizado em todos os canais de venda (app, web, etc.).",
+      "shortDescription": "Permite que um único voucher seja utilizado em todos os canais de venda (app, web, etc).",
       "features": [
         "Microsserviços distribuídos para emissão e validação de vouchers",
         "Cache de baixa latência para acelerar resgates",
@@ -121,12 +118,10 @@
       ]
     }
   ],
-
   "skills": {
     "title": "Habilidades Técnicas",
     "description": "Algumas das principais tecnologias e ferramentas que utilizo no dia a dia."
   },
-
   "contact": {
     "title": "Entre em Contato",
     "subtitle": "Vamos trabalhar juntos no seu próximo projeto",
