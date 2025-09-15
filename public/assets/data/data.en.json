@@ -19,9 +19,28 @@
   "skills": {
     "title": "Technical Skills",
     "categories": {
-      "backend": "Backend",
-      "frontend": "Frontend",
-      "tools": "Tools & Others"
+      "backend": [
+        ".NET",
+        "ASP.NET Core",
+        "Entity Framework Core (EF Core)",
+        "RESTful APIs",
+        "Clean Architecture",
+        "JWT / Identity",
+        "Swagger / OpenAPI"
+      ],
+      "databases": ["SQL Server", "PostgreSQL", "Redis (distributed cache)"],
+      "messaging": ["Kafka (asynchronous messaging)"],
+      "devops": [
+        "Docker / Docker Compose",
+        "Kubernetes (Lens)",
+        "CI/CD pipelines",
+        "Git Flow"
+      ],
+      "observability": ["Serilog (structured logging)", "Dynatrace", "Grafana"],
+      "testing": ["xUnit", "Automated testing (mocks/stubs)"],
+      "frontend": ["Angular"],
+      "tools": ["Agile methodologies (Scrum/Kanban)"],
+      "os": ["Windows", "macOS", "Linux"]
     },
     "levels": {
       "beginner": "Beginner",

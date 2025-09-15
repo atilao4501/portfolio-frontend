@@ -16,7 +16,9 @@
             *ngFor="let skill of category.skills"
             [style.--skill-color]="skill.color"
           >
-            <div class="skill-icon">{{ skill.icon }}</div>
+            <div class="skill-icon">
+              <i [class]="skill.icon" [style.color]="skill.color"></i>
+            </div>
             <h3 class="skill-name">{{ skill.name }}</h3>
           </div>
         </div>

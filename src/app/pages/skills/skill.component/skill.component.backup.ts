@@ -29,53 +29,56 @@ interface SkillsViewModel {
 export class SkillComponent implements OnInit {
   private iconMap: Record<string, string> = {
     // Backend
-    '.NET': 'devicon-dot-net-plain',
-    'ASP.NET Core': 'devicon-dot-net-plain',
-    'Entity Framework Core (EF Core)': 'devicon-entityframeworkcore-plain',
-    'RESTful APIs': 'devicon-swagger-plain',
-    'APIs RESTful': 'devicon-swagger-plain',
-    'Clean Architecture': 'devicon-dot-net-plain',
-    'JWT / Identity': 'devicon-dot-net-plain',
-    'Swagger / OpenAPI': 'devicon-swagger-plain',
+    '.NET': '🔷',
+    'ASP.NET Core': '🌐',
+    'Entity Framework Core (EF Core)': '🗄️',
+    'RESTful APIs': '🔗',
+    'APIs RESTful': '🔗',
+    'Clean Architecture': '🏗️',
+    'JWT / Identity': '🔐',
+    'Swagger / OpenAPI': '📋',
 
     // Databases
-    'SQL Server': 'devicon-microsoftsqlserver-plain',
-    PostgreSQL: 'devicon-postgresql-plain',
-    'Redis (distributed cache)': 'devicon-redis-plain',
-    'Redis (cache distribuído)': 'devicon-redis-plain',
+    'SQL Server': '🗄️',
+    PostgreSQL: '🐘',
+    'Redis (distributed cache)': '⚡',
+    'Redis (cache distribuído)': '⚡',
+    'Data migration': '🔄',
+    'Migração de dados': '🔄',
 
     // Messaging
-    'Kafka (asynchronous messaging)': 'devicon-apachekafka-plain',
-    'Kafka (mensageria assíncrona)': 'devicon-apachekafka-plain',
+    'Kafka (asynchronous messaging)': '📡',
+    'Kafka (mensageria assíncrona)': '📡',
 
     // DevOps
-    'Docker / Docker Compose': 'devicon-docker-plain',
-    'Kubernetes (Lens)': 'devicon-kubernetes-plain',
-    'CI/CD pipelines': 'devicon-githubactions-plain',
-    'Git Flow': 'devicon-git-plain',
+    'Docker / Docker Compose': '�',
+    'Kubernetes (Lens)': '⚙️',
+    'CI/CD pipelines': '�',
+    'Git Flow': '📝',
 
     // Observability
-    'Serilog (structured logging)': 'devicon-dot-net-plain',
-    'Serilog (logs estruturados)': 'devicon-dot-net-plain',
-    Dynatrace: 'devicon-dynatrace-plain',
-    Grafana: 'devicon-grafana-plain',
+    'Serilog (structured logging)': '�',
+    'Serilog (logs estruturados)': '📊',
+    Dynatrace: '🎯',
+    Grafana: '�',
 
     // Testing
-    xUnit: 'devicon-dot-net-plain',
-    'Automated testing (mocks/stubs)': 'devicon-jest-plain',
-    'Testes automatizados (mocks/stubs)': 'devicon-jest-plain',
+    xUnit: '🧪',
+    'Automated testing (mocks/stubs)': '🤖',
+    'Testes automatizados (mocks/stubs)': '🤖',
 
     // Frontend
-    Angular: 'devicon-angular-plain',
+    Angular: '🅰️',
+    'Frontend-backend integration': '🔗',
+    'Integração frontend-backend': '�',
 
     // Tools
-    'Agile methodologies (Scrum/Kanban)': 'devicon-jira-plain',
-    'Metodologias Ágeis (Scrum/Kanban)': 'devicon-jira-plain',
-
-    // Operating Systems
-    Windows: 'devicon-windows11-original',
-    macOS: 'devicon-apple-original',
-    Linux: 'devicon-linux-plain',
+    'Agile methodologies (Scrum/Kanban)': '🏃',
+    'Metodologias Ágeis (Scrum/Kanban)': '�',
+    'API Security': '🔒',
+    'Segurança em APIs': '�',
+    'Banking Integrations (Bradesco, Itaú, co-branded cards)': '🏦',
+    'Integrações Bancárias (Bradesco, Itaú, cartões co-branded)': '🏦',
   };
 
   private colorMap: Record<string, string> = {
@@ -94,6 +97,8 @@ export class SkillComponent implements OnInit {
     PostgreSQL: '#336791',
     'Redis (distributed cache)': '#DC382D',
     'Redis (cache distribuído)': '#DC382D',
+    'Data migration': '#1E40AF',
+    'Migração de dados': '#1E40AF',
 
     // Messaging - Orange
     'Kafka (asynchronous messaging)': '#F97316',
@@ -118,15 +123,16 @@ export class SkillComponent implements OnInit {
 
     // Frontend - Red tones
     Angular: '#DD0031',
+    'Frontend-backend integration': '#DC2626',
+    'Integração frontend-backend': '#DC2626',
 
-    // Tools - Gray tones
+    // Tools - Gray/Mixed tones
     'Agile methodologies (Scrum/Kanban)': '#6B7280',
     'Metodologias Ágeis (Scrum/Kanban)': '#6B7280',
-
-    // Operating Systems
-    Windows: '#0078D4',
-    macOS: '#000000',
-    Linux: '#FCC624',
+    'API Security': '#EF4444',
+    'Segurança em APIs': '#EF4444',
+    'Banking Integrations (Bradesco, Itaú, co-branded cards)': '#059669',
+    'Integrações Bancárias (Bradesco, Itaú, cartões co-branded)': '#059669',
   };
 
   vm$!: Observable<SkillsViewModel>;
@@ -164,7 +170,7 @@ export class SkillComponent implements OnInit {
   }
 
   private getDefaultIcon(): string {
-    return 'devicon-devicon-plain'; // Ícone padrão do Devicon
+    return `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`;
   }
 
   private getCategoryTitle(categoryKey: string): string {
@@ -178,7 +184,6 @@ export class SkillComponent implements OnInit {
       testing: 'Testing',
       frontend: 'Frontend',
       tools: 'Tools',
-      os: 'Operating Systems',
     };
 
     return (
@@ -197,7 +202,6 @@ export class SkillComponent implements OnInit {
       testing: '#FBBF24',
       frontend: '#EF4444',
       tools: '#6B7280',
-      os: '#8B5A2B',
     };
 
     return defaultColors[categoryKey] || '#64748B';

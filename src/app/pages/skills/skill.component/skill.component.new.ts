@@ -43,6 +43,8 @@ export class SkillComponent implements OnInit {
     PostgreSQL: 'devicon-postgresql-plain',
     'Redis (distributed cache)': 'devicon-redis-plain',
     'Redis (cache distribuído)': 'devicon-redis-plain',
+    'Data migration': 'devicon-postgresql-plain',
+    'Migração de dados': 'devicon-postgresql-plain',
 
     // Messaging
     'Kafka (asynchronous messaging)': 'devicon-apachekafka-plain',
@@ -67,15 +69,18 @@ export class SkillComponent implements OnInit {
 
     // Frontend
     Angular: 'devicon-angular-plain',
+    'Frontend-backend integration': 'devicon-angular-plain',
+    'Integração frontend-backend': 'devicon-angular-plain',
 
     // Tools
     'Agile methodologies (Scrum/Kanban)': 'devicon-jira-plain',
     'Metodologias Ágeis (Scrum/Kanban)': 'devicon-jira-plain',
-
-    // Operating Systems
-    Windows: 'devicon-windows11-original',
-    macOS: 'devicon-apple-original',
-    Linux: 'devicon-linux-plain',
+    'API Security': 'devicon-swagger-plain',
+    'Segurança em APIs': 'devicon-swagger-plain',
+    'Banking Integrations (Bradesco, Itaú, co-branded cards)':
+      'devicon-dot-net-plain',
+    'Integrações Bancárias (Bradesco, Itaú, cartões co-branded)':
+      'devicon-dot-net-plain',
   };
 
   private colorMap: Record<string, string> = {
@@ -94,6 +99,8 @@ export class SkillComponent implements OnInit {
     PostgreSQL: '#336791',
     'Redis (distributed cache)': '#DC382D',
     'Redis (cache distribuído)': '#DC382D',
+    'Data migration': '#1E40AF',
+    'Migração de dados': '#1E40AF',
 
     // Messaging - Orange
     'Kafka (asynchronous messaging)': '#F97316',
@@ -118,15 +125,16 @@ export class SkillComponent implements OnInit {
 
     // Frontend - Red tones
     Angular: '#DD0031',
+    'Frontend-backend integration': '#DC2626',
+    'Integração frontend-backend': '#DC2626',
 
-    // Tools - Gray tones
+    // Tools - Gray/Mixed tones
     'Agile methodologies (Scrum/Kanban)': '#6B7280',
     'Metodologias Ágeis (Scrum/Kanban)': '#6B7280',
-
-    // Operating Systems
-    Windows: '#0078D4',
-    macOS: '#000000',
-    Linux: '#FCC624',
+    'API Security': '#EF4444',
+    'Segurança em APIs': '#EF4444',
+    'Banking Integrations (Bradesco, Itaú, co-branded cards)': '#059669',
+    'Integrações Bancárias (Bradesco, Itaú, cartões co-branded)': '#059669',
   };
 
   vm$!: Observable<SkillsViewModel>;
@@ -178,7 +186,6 @@ export class SkillComponent implements OnInit {
       testing: 'Testing',
       frontend: 'Frontend',
       tools: 'Tools',
-      os: 'Operating Systems',
     };
 
     return (
@@ -197,7 +204,6 @@ export class SkillComponent implements OnInit {
       testing: '#FBBF24',
       frontend: '#EF4444',
       tools: '#6B7280',
-      os: '#8B5A2B',
     };
 
     return defaultColors[categoryKey] || '#64748B';

@@ -19,9 +19,28 @@
   "skills": {
     "title": "Habilidades Técnicas",
     "categories": {
-      "backend": "Backend",
-      "frontend": "Frontend",
-      "tools": "Ferramentas e Outros"
+      "backend": [
+        ".NET",
+        "ASP.NET Core",
+        "Entity Framework Core (EF Core)",
+        "APIs RESTful",
+        "Clean Architecture",
+        "JWT / Identity",
+        "Swagger / OpenAPI"
+      ],
+      "databases": ["SQL Server", "PostgreSQL", "Redis (cache distribuído)"],
+      "messaging": ["Kafka (mensageria assíncrona)"],
+      "devops": [
+        "Docker / Docker Compose",
+        "Kubernetes (Lens)",
+        "CI/CD pipelines",
+        "Git Flow"
+      ],
+      "observability": ["Serilog (logs estruturados)", "Dynatrace", "Grafana"],
+      "testing": ["xUnit", "Testes automatizados (mocks/stubs)"],
+      "frontend": ["Angular"],
+      "tools": ["Metodologias Ágeis (Scrum/Kanban)"],
+      "os": ["Windows", "macOS", "Linux"]
     },
     "levels": {
       "beginner": "Iniciante",
