@@ -12,7 +12,7 @@ type SharedFile = {
   links: any;
   contact: any;
   projects: SharedProject[];
-  skills: Record<string, Skill[]>; // categorias -> array de skills
+  skills: Skill[]; // lista única de skills
 };
 type LangFile = {
   navbar: any;
@@ -49,7 +49,7 @@ export class PortfolioDataService {
   private get skillsIndex$() {
     return (this._skillsIndex$ ??= this.shared$.pipe(
       map((shared) => {
-        const allSkills: Skill[] = Object.values(shared.skills).flat();
+        const allSkills: Skill[] = shared.skills || [];
         const index = new Map<string, Skill>();
         for (const s of allSkills) index.set(s.id, s);
         return { allSkills, index };
@@ -81,7 +81,20 @@ export class PortfolioDataService {
   /** Retorna objeto de categorias -> array de skills */
   getSkillsGrouped(): Observable<Record<string, Skill[]>> {
     return this.shared$.pipe(
-      map((shared) => shared.skills as Record<string, Skill[]>)
+      map((shared) => {
+        const skillsArray = shared.skills || [];
+        return skillsArray.reduce(
+          (acc: Record<string, Skill[]>, skill: Skill) => {
+            const type = skill.type;
+            if (!acc[type]) {
+              acc[type] = [];
+            }
+            acc[type].push(skill);
+            return acc;
+          },
+          {}
+        );
+      })
     );
   }
 

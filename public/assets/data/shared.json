@@ -90,19 +90,23 @@
     },
     {
       "id": "m-adriane-ecommerce",
-      "skills": ["wordpress", "woocommerce"]
+      "skills": ["wordpress", "woocommerce"],
+      "links": {
+        "site": "https://madriane.com.br"
+      }
     },
     {
       "id": "arte-doce-amigurumis",
-      "skills": ["wordpress", "woocommerce"]
+      "skills": ["wordpress", "woocommerce"],
+      "links": {
+        "site": "https://artedoce.fivecard.com.br"
+      }
     }
   ],
 
   "corporate": [
     {
       "id": "invillia-bradesco",
-      "company": "Invillia / Bradesco P2",
-      "period": "2024–2025",
       "skills": [
         "dotnet",
         "mongodb",
@@ -115,7 +119,6 @@
     {
       "id": "gav",
       "company": "GAV Resorts",
-      "period": "2023–2024",
       "skills": ["dotnet", "sqlserver", "postgresql", "redis"]
     }
   ],
@@ -142,204 +145,230 @@
     }
   ],
 
-  "skills": {
-    "backend": [
-      {
-        "id": "dotnet",
-        "name": ".NET",
-        "type": "backend",
-        "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"
-        }
-      },
-      {
-        "id": "csharp",
-        "name": "C#",
-        "type": "backend",
-        "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
-        }
-      },
-      {
-        "id": "efcore",
-        "name": "Entity Framework Core",
-        "type": "backend",
-        "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"
-        }
-      },
-      {
-        "id": "aspnetcore",
-        "name": "ASP.NET Core",
-        "type": "backend",
-        "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"
-        }
+  "skills": [
+    {
+      "id": "dotnet",
+      "name": ".NET",
+      "type": "backend",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"
       }
-    ],
-    "database": [
-      {
-        "id": "sqlserver",
-        "name": "SQL Server",
-        "type": "database",
-        "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
-        }
-      },
-      {
-        "id": "postgresql",
-        "name": "PostgreSQL",
-        "type": "database",
-        "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-        }
-      },
-      {
-        "id": "mongodb",
-        "name": "MongoDB",
-        "type": "database",
-        "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-        }
-      },
-      {
-        "id": "redis",
-        "name": "Redis",
-        "type": "database",
-        "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
-        }
+    },
+    {
+      "id": "csharp",
+      "name": "C#",
+      "type": "backend",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
       }
-    ],
-    "frontend": [
-      {
-        "id": "angular",
-        "name": "Angular",
-        "type": "frontend",
-        "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
-        }
-      },
-      {
-        "id": "typescript",
-        "name": "TypeScript",
-        "type": "frontend",
-        "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-        }
-      },
-      {
-        "id": "javascript",
-        "name": "JavaScript",
-        "type": "frontend",
-        "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-        }
-      },
-      {
-        "id": "htmlcss",
-        "name": "HTML/CSS",
-        "type": "frontend",
-        "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-        }
-      },
-      {
-        "id": "wordpress",
-        "name": "WordPress",
-        "type": "frontend",
-        "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg"
-        }
-      },
-      {
-        "id": "woocommerce",
-        "name": "WooCommerce",
-        "type": "frontend",
-        "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/woocommerce/woocommerce-original.svg"
-        }
+    },
+    {
+      "id": "aspnetcore",
+      "name": "ASP.NET Core",
+      "type": "backend",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"
       }
-    ],
-    "devops": [
-      {
-        "id": "docker",
-        "name": "Docker",
-        "type": "devops",
-        "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-        }
-      },
-      {
-        "id": "kubernetes",
-        "name": "Kubernetes",
-        "type": "devops",
-        "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
-        }
-      },
-      {
-        "id": "nginx",
-        "name": "NGINX",
-        "type": "devops",
-        "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg"
-        }
-      },
-      {
-        "id": "githubactions",
-        "name": "GitHub Actions",
-        "type": "devops",
-        "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-plain.svg"
-        }
+    },
+    {
+      "id": "efcore",
+      "name": "Entity Framework Core",
+      "type": "backend",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"
       }
-    ],
-    "messaging": [
-      {
-        "id": "apachekafka",
-        "name": "Apache Kafka",
-        "type": "messaging",
-        "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg"
-        }
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "type": "backend",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
       }
-    ],
-    "observability": [
-      {
-        "id": "grafana",
-        "name": "Grafana",
-        "type": "observability",
-        "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg"
-        }
-      },
-      {
-        "id": "prometheus",
-        "name": "Prometheus",
-        "type": "observability",
-        "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg"
-        }
+    },
+    {
+      "id": "sqlserver",
+      "name": "SQL Server",
+      "type": "database",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
       }
-    ],
-    "tools": [
-      {
-        "id": "git",
-        "name": "Git",
-        "type": "tool",
-        "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-        }
-      },
-      {
-        "id": "azure",
-        "name": "Azure",
-        "type": "tool",
-        "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
-        }
+    },
+    {
+      "id": "postgresql",
+      "name": "PostgreSQL",
+      "type": "database",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
       }
-    ]
-  }
+    },
+    {
+      "id": "mongodb",
+      "name": "MongoDB",
+      "type": "database",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+      }
+    },
+    {
+      "id": "redis",
+      "name": "Redis",
+      "type": "database",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+      }
+    },
+    {
+      "id": "mysql",
+      "name": "MySQL",
+      "type": "database",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+      }
+    },
+    {
+      "id": "angular",
+      "name": "Angular",
+      "type": "frontend",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg"
+      }
+    },
+    {
+      "id": "typescript",
+      "name": "TypeScript",
+      "type": "frontend",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+      }
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "type": "frontend",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+      }
+    },
+    {
+      "id": "htmlcss",
+      "name": "HTML/CSS",
+      "type": "frontend",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+      }
+    },
+    {
+      "id": "wordpress",
+      "name": "WordPress",
+      "type": "frontend",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg"
+      }
+    },
+    {
+      "id": "woocommerce",
+      "name": "WooCommerce",
+      "type": "frontend",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/woocommerce/woocommerce-original.svg"
+      }
+    },
+    {
+      "id": "flutter",
+      "name": "Flutter",
+      "type": "frontend",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+      }
+    },
+    {
+      "id": "docker",
+      "name": "Docker",
+      "type": "devops",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+      }
+    },
+    {
+      "id": "kubernetes",
+      "name": "Kubernetes",
+      "type": "devops",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
+      }
+    },
+    {
+      "id": "nginx",
+      "name": "NGINX",
+      "type": "devops",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg"
+      }
+    },
+    {
+      "id": "githubactions",
+      "name": "GitHub Actions",
+      "type": "devops",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-plain.svg"
+      }
+    },
+    {
+      "id": "apachekafka",
+      "name": "Apache Kafka",
+      "type": "devops",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg"
+      }
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "type": "tools",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+      }
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "type": "tools",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+      }
+    },
+    {
+      "id": "azure",
+      "name": "Azure DevOps",
+      "type": "tools",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuredevops/azuredevops-plain.svg"
+      }
+    },
+    {
+      "id": "serilog",
+      "name": "Serilog",
+      "type": "tools",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/logstash.svg"
+      }
+    },
+    {
+      "id": "scrum",
+      "name": "Scrum",
+      "type": "tools",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
+      }
+    },
+    {
+      "id": "kanban",
+      "name": "Kanban",
+      "type": "tools",
+      "svg": {
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg"
+      }
+    }
+  ]
 }

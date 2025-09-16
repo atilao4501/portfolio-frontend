@@ -1,6 +1,14 @@
+export enum SkillType {
+  BACKEND = 'backend',
+  FRONTEND = 'frontend',
+  DATABASE = 'database',
+  DEVOPS = 'devops',
+  TOOLS = 'tools',
+}
+
 export interface Skill {
   id: string;
   name: string;
-  type: string; // backend | frontend | database | devops | messaging | observability | tool
+  type: SkillType;
   svg: { url: string };
 }

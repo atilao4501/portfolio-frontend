@@ -1,9 +1,10 @@
 /* Skills Page Modern Design */
+/* Skills Page Modern Design */
 .skills-container {
-  min-height: 100vh;
   padding: 2rem 1rem 4rem;
   background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 50%, #0f1419 100%);
   position: relative;
+  min-height: fit-content;
 }
 
 .skills-container::before {
@@ -33,7 +34,7 @@
   margin: 0 auto;
   position: relative;
   z-index: 1;
-  padding: 0 2rem;
+  padding: 0 2rem 2rem;
 }
 
 /* Header */
@@ -94,9 +95,9 @@
 
 /* Skills Grid */
 .skills-grid {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 1rem;
+  gap: 12px;
   justify-content: flex-start;
   max-width: 100%;
   padding: 0;
@@ -122,8 +123,7 @@
   align-items: center;
   gap: 10px;
   position: relative;
-  min-width: 140px;
-  max-width: 200px;
+  width: 140px;
 }
 
 .skill-card::before {
@@ -194,11 +194,11 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .skills-container {
-    padding: 1rem 0.5rem 2rem;
+    padding: 1rem 0.5rem 4rem;
   }
 
   .skills-content {
-    padding: 0 1rem;
+    padding: 0 1rem 3rem;
   }
 
   .skills-header {
@@ -215,6 +215,7 @@
   }
 
   .skills-grid {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.75rem;
     justify-items: center;
@@ -250,11 +251,11 @@
 
 @media (max-width: 480px) {
   .skills-container {
-    padding: 0.5rem 0.25rem 1.5rem;
+    padding: 0.5rem 0.25rem 4rem;
   }
 
   .skills-content {
-    padding: 0 0.5rem;
+    padding: 0 0.5rem 3rem;
   }
 
   .skills-header {

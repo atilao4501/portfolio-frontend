@@ -2,7 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Observable, map } from 'rxjs';
 import { PortfolioDataService } from '../../../core/services/portfolio-data.service';
-import { Skill } from '../../../core/models/skill.model';
+import { Skill, SkillType } from '../../../core/models/skill.model';
 import {
   DATA_SERVICE,
   PortfolioDataService as DataServiceInterface,
@@ -40,41 +40,56 @@ export class SkillComponent implements OnInit {
   ngOnInit(): void {
     this.vm$ = this.dataService.getData$().pipe(
       map((data) => {
-        const shared = (data as any).shared;
+        const skillsList = (data as any).shared?.skills || [];
 
-        if (!shared || !shared.skills) {
-          return { title: 'Skills', categories: [] };
+        if (!skillsList || skillsList.length === 0) {
+          return {
+            title: (data as any).skills?.title || 'Skills',
+            categories: [],
+          };
         }
 
-        const categories: SkillCategory[] = Object.entries(shared.skills).map(
-          ([key, arr]) => ({
-            title: this.getCategoryTitle(key),
-            skills: (arr as Skill[]).map((s: Skill) => ({
+        // Agrupar skills por tipo
+        const skillsByType = skillsList.reduce(
+          (acc: Record<string, Skill[]>, skill: Skill) => {
+            const type = skill.type;
+            if (!acc[type]) {
+              acc[type] = [];
+            }
+            acc[type].push(skill);
+            return acc;
+          },
+          {}
+        );
+
+        // Converter para o formato esperado pelo template
+        const categories: SkillCategory[] = Object.entries(skillsByType).map(
+          ([type, skills]) => ({
+            title: this.getCategoryTitle(type as SkillType),
+            skills: (skills as Skill[]).map((s: Skill) => ({
               name: s.name,
               svg: s.svg.url,
             })),
           })
         );
-        return { title: 'Skills', categories };
+
+        return {
+          title: (data as any).skills?.title || 'Skills',
+          categories,
+        };
       })
     );
   }
 
-  private getCategoryTitle(categoryKey: string): string {
-    // Capitalizar e formatar o nome da categoria
-    const categoryMap: Record<string, string> = {
-      backend: 'Backend',
-      database: 'Database',
-      messaging: 'Messaging',
-      devops: 'DevOps',
-      observability: 'Observability',
-      frontend: 'Frontend',
-      tools: 'Tools',
+  private getCategoryTitle(categoryKey: SkillType): string {
+    const categoryMap: Record<SkillType, string> = {
+      [SkillType.BACKEND]: 'Backend',
+      [SkillType.FRONTEND]: 'Frontend',
+      [SkillType.DATABASE]: 'Database',
+      [SkillType.DEVOPS]: 'DevOps',
+      [SkillType.TOOLS]: 'Tools',
     };
 
-    return (
-      categoryMap[categoryKey] ||
-      categoryKey.charAt(0).toUpperCase() + categoryKey.slice(1)
-    );
+    return categoryMap[categoryKey] || categoryKey;
   }
 }
