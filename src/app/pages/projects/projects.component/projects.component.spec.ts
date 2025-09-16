@@ -110,10 +110,7 @@ describe('ProjectsComponent', () => {
     });
   });
 
-  it('should get technology color', () => {
-    const color = component.getTechnologyColor({ id: 'dotnet' });
-    expect(color).toBe('bg-purple-100 text-purple-800');
-  });
+  // O cálculo de cor agora é responsabilidade do pipe/serviço; teste específico pode ser adicionado isoladamente.
 
   it('should open link', () => {
     spyOn(window, 'open');

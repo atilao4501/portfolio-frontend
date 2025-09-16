@@ -85,9 +85,10 @@ export interface SkillsData {
   };
 }
 
-export interface ProjectsData {
+export interface ProjectsPageData {
   title: string;
-  [key: string]: any; // Para IDs específicos de projetos
+  subtitle: string;
+  featuresTitle: string;
 }
 
 export interface ExperienceData {
@@ -118,8 +119,8 @@ export interface PortfolioData {
   hero: HeroData;
   about: AboutData;
   skills: SkillsData;
-  projects: ProjectsData;
-  experience: ExperienceData;
-  education: EducationData;
+  projectsPage?: ProjectsPageData; // página de projetos (metadados), projetos em si vêm de shared
+  experience?: ExperienceData; // opcional se descontinuado
+  education?: EducationData; // opcional se descontinuado
   contact: ContactData;
 }

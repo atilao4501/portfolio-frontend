@@ -69,6 +69,10 @@
   display: flex;
   align-items: center;
   gap: 2rem;
+  flex: 1 1 auto;
+  justify-content: center;
+  /* Garantir que não grude nos extremos quando largura menor */
+  min-width: 0;
 }
 
 .nav-link {
@@ -118,6 +122,22 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* Ajuste para compensar largura variável do bloco da direita e manter alinhamento mais simétrico */
+.navbar-brand {
+  margin-right: 1.5rem;
+}
+
+@media (min-width: 769px) {
+  /* Usa pseudo espaçador caso ações sejam mais estreitas que brand e vice-versa */
+  .navbar-container::before,
+  .navbar-container::after {
+    content: "";
+    display: block;
+    width: 0;
+  }
 }
 
 /* Links sociais */

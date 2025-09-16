@@ -6,6 +6,7 @@ import { PortfolioDataService } from '../../../core/services/portfolio-data.serv
 import { I18nService } from '../../../core/services/i18n.service';
 import { Project } from '../../../core/models/project.model';
 import { AssetsDataService } from '../../../core/services/data.assets.service';
+import { SkillColorPipe } from '../../../shared/skill-color.pipe';
 
 interface ProjectsViewModel {
   title: string;
@@ -17,7 +18,7 @@ interface ProjectsViewModel {
 @Component({
   standalone: true,
   selector: 'app-projects',
-  imports: [NgIf, NgFor, NgClass, AsyncPipe],
+  imports: [NgIf, NgFor, NgClass, AsyncPipe, SkillColorPipe],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css'],
 })
@@ -57,25 +58,5 @@ export class ProjectsComponent {
     if (url) {
       window.open(url, '_blank', 'noopener noreferrer');
     }
-  }
-
-  getTechnologyColor(skill: string | { id: string }): string {
-    const skillId = typeof skill === 'string' ? skill : skill.id;
-    const colors: { [key: string]: string } = {
-      dotnet: 'bg-purple-100 text-purple-800',
-      efcore: 'bg-blue-100 text-blue-800',
-      sqlserver: 'bg-orange-100 text-orange-800',
-      postgresql: 'bg-blue-100 text-blue-800',
-      redis: 'bg-red-100 text-red-800',
-      docker: 'bg-blue-100 text-blue-800',
-      angular: 'bg-red-100 text-red-800',
-      apachekafka: 'bg-gray-100 text-gray-800',
-      kubernetes: 'bg-blue-100 text-blue-800',
-      aspnetcore: 'bg-purple-100 text-purple-800',
-      wordpress: 'bg-blue-100 text-blue-800',
-      woocommerce: 'bg-purple-100 text-purple-800',
-      grafana: 'bg-orange-100 text-orange-800',
-    };
-    return colors[skillId] || 'bg-gray-100 text-gray-800';
   }
 }

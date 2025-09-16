@@ -33,7 +33,7 @@
           <span
             *ngFor="let skill of project.skills"
             class="tech-tag"
-            [ngClass]="getTechnologyColor(skill)"
+            [ngClass]="skill | skillColor"
           >
             {{ skill.name }}
           </span>
