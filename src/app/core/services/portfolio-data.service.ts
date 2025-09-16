@@ -3,29 +3,24 @@ import { HttpClient } from '@angular/common/http';
 import { combineLatest, map, Observable, shareReplay } from 'rxjs';
 import { DATA_PATHS, LangCode } from '../config/data-paths';
 import { Skill } from '../models/skill.model';
-import { Project } from '../models/project.model';
+import { Project, RawMultilangProject } from '../models/project.model';
 
 // Tipos internos para merge
-type SharedProject = { id: string; skills: string[]; links?: any };
 type SharedFile = {
   personal: any;
   links: any;
   contact: any;
-  projects: SharedProject[];
+  projects: RawMultilangProject[];
   skills: Skill[]; // lista única de skills
 };
 type LangFile = {
   navbar: any;
   hero: any;
   about: any;
-  projects: Array<{
-    id: string;
-    title?: string;
-    shortDescription?: string;
-    features?: string[];
-  }>;
+  // projects removido: agora vem só de shared
   skills: any;
   contact: any;
+  projectsPage?: { title?: string; subtitle?: string; featuresTitle?: string };
 };
 
 // Flag simples para futura API
@@ -100,27 +95,22 @@ export class PortfolioDataService {
 
   getProjects(lang: LangCode): Observable<Project[]> {
     if (USE_API) return this.apiProjects$(lang);
-    return combineLatest([
-      this.shared$,
-      this.skillsIndex$,
-      this.langFile(lang),
-    ]).pipe(
-      map(([shared, { index }, langData]) => {
-        const langProjectsMap = new Map(
-          langData.projects.map((p) => [p.id, p])
-        );
-        return shared.projects.map((sharedProj) => {
-          const langProj = langProjectsMap.get(sharedProj.id);
-          const skillsExpanded: Skill[] = sharedProj.skills
+    return combineLatest([this.shared$, this.skillsIndex$]).pipe(
+      map(([shared, { index }]) => {
+        return shared.projects.map((raw) => {
+          const skillsExpanded: Skill[] = (raw.skills || [])
             .map((id) => index.get(id))
             .filter((s): s is Skill => !!s);
+
+          const langKey = lang === 'pt-BR' ? 'pt' : 'en';
+
           return {
-            id: sharedProj.id,
-            title: langProj?.title,
-            shortDescription: langProj?.shortDescription,
-            features: langProj?.features ?? [],
+            id: raw.id,
+            title: raw.title[langKey],
+            shortDescription: raw.shortDescription[langKey],
+            features: raw.features[langKey] || [],
             skills: skillsExpanded,
-            links: sharedProj.links,
+            links: raw.links,
           } as Project;
         });
       }),

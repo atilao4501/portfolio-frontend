@@ -1,9 +1,9 @@
 export type LangCode = 'pt-BR' | 'en';
 
 export const DATA_PATHS = {
-  shared: '/shared.json',
+  shared: '/assets/data/shared.json',
   byLang: {
-    'pt-BR': '/data.pt-BR.json',
-    en: '/data.en.json',
+    'pt-BR': '/assets/data/data.pt-BR.json',
+    en: '/assets/data/data.en.json',
   },
 } as const;

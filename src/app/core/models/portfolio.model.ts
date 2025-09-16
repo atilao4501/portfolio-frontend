@@ -9,6 +9,30 @@ export interface LinkMap {
   cv?: string;
 }
 
+// Representa o formato real do shared.json atual
+export interface SharedDataProjectMultilang {
+  id: string;
+  title: { pt: string; en: string };
+  shortDescription: { pt: string; en: string };
+  features: { pt: string[]; en: string[] };
+  skills: string[]; // IDs de skills (serão expandidos onde necessário)
+  links?: LinkMap;
+}
+
+export interface SharedDataSkill {
+  id: string;
+  name: string;
+  type: string; // mantemos string para evitar dependência circular com SkillType
+  svg: { url: string };
+}
+
+export interface SharedDataCertification {
+  id: string;
+  name: string;
+  issuer: string;
+  year: string;
+}
+
 export interface SharedData {
   personal: {
     name: string;
@@ -20,35 +44,9 @@ export interface SharedData {
     email: string;
     whatsapp: string;
   };
-  stack: string[];
-  projects: {
-    id: string;
-    name: string;
-    stack: string[];
-    links?: LinkMap;
-  }[];
-  corporate: {
-    id: string;
-    company: string;
-    period: string;
-    stack: string[];
-  }[];
-  freelance: {
-    id: string;
-    name: string;
-  }[];
-  education: {
-    id: string;
-    institution: string;
-    period: string;
-  }[];
-  certifications: {
-    id: string;
-    name: string;
-    issuer: string;
-    year: string;
-  }[];
-  skills: Record<string, any[]>;
+  projects: SharedDataProjectMultilang[];
+  certifications: SharedDataCertification[];
+  skills: SharedDataSkill[]; // lista plana de skills
 }
 
 export interface NavbarData {

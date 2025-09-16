@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { NgFor, NgIf, AsyncPipe } from '@angular/common';
 import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 import { PortfolioDataService } from '../../core/services/portfolio-data.service';
 import { Project } from '../../core/models/project.model';
-import { LangCode } from '../../core/config/data-paths';
-
-const DEFAULT_LANG: LangCode = 'pt-BR';
+import { I18nService } from '../../core/services/i18n.service';
 
 @Component({
   selector: 'app-projects-simple',
@@ -60,7 +59,10 @@ const DEFAULT_LANG: LangCode = 'pt-BR';
 })
 export class ProjectsSimpleComponent {
   projects$!: Observable<Project[]>;
-  constructor(private data: PortfolioDataService) {
-    this.projects$ = this.data.getProjects(DEFAULT_LANG);
+  constructor(private data: PortfolioDataService, private i18n: I18nService) {
+    this.projects$ = this.i18n.lang$.pipe(
+      // cada vez que muda o idioma refaz a query
+      switchMap((lang: string) => this.data.getProjects(lang as any))
+    );
   }
 }

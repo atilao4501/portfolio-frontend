@@ -1,21 +1,11 @@
 import { Component } from '@angular/core';
 import { AsyncPipe, NgIf, NgFor, NgClass } from '@angular/common';
-import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { Observable, combineLatest } from 'rxjs';
+import { map, switchMap } from 'rxjs/operators';
+import { PortfolioDataService } from '../../../core/services/portfolio-data.service';
+import { I18nService } from '../../../core/services/i18n.service';
+import { Project } from '../../../core/models/project.model';
 import { AssetsDataService } from '../../../core/services/data.assets.service';
-
-interface Project {
-  id: string;
-  title: string;
-  shortDescription: string;
-  features: string[];
-  skills?: string[];
-  links?: {
-    github?: string;
-    site?: string;
-    swagger?: string;
-  };
-}
 
 interface ProjectsViewModel {
   title: string;
@@ -34,33 +24,30 @@ interface ProjectsViewModel {
 export class ProjectsComponent {
   vm$: Observable<ProjectsViewModel>;
 
-  constructor(private assetsDataService: AssetsDataService) {
-    this.vm$ = this.assetsDataService.getData$().pipe(
-      map((data: any) => {
-        // Combina dados dos dois JSONs
-        const projects = data.projects || [];
-        const sharedProjects = data.shared?.projects || [];
+  constructor(
+    private portfolio: PortfolioDataService,
+    private i18n: I18nService,
+    private assetsData: AssetsDataService
+  ) {
+    // Pegamos projects diretamente do shared + lang atual
+    const projects$ = this.i18n.lang$.pipe(
+      switchMap((lang) => this.portfolio.getProjects(lang as any))
+    );
 
-        // Combina informações de ambas as fontes
-        const combinedProjects = projects.map((project: any) => {
-          const sharedProject = sharedProjects.find(
-            (sp: any) => sp.id === project.id
-          );
-          return {
-            ...project,
-            skills: sharedProject?.skills || [],
-            links: sharedProject?.links || {},
-          };
-        });
+    // Para textos (title/subtitle/featuresTitle) ainda dependemos do arquivo de idioma
+    const uiTexts$ = this.assetsData
+      .getData$()
+      .pipe(map((d: any) => d.projectsPage || {}));
 
+    this.vm$ = combineLatest([projects$, uiTexts$]).pipe(
+      map(([projects, ui]) => {
         return {
-          title: data.projectsPage?.title || 'Meus Projetos',
+          title: ui?.title || 'Meus Projetos',
           subtitle:
-            data.projectsPage?.subtitle ||
+            ui?.subtitle ||
             'Uma seleção dos projetos que desenvolvi ao longo da minha carreira',
-          featuresTitle:
-            data.projectsPage?.featuresTitle || 'Principais Características',
-          projects: combinedProjects,
+          featuresTitle: ui?.featuresTitle || 'Principais Características',
+          projects,
         };
       })
     );
@@ -72,7 +59,8 @@ export class ProjectsComponent {
     }
   }
 
-  getTechnologyColor(skill: string): string {
+  getTechnologyColor(skill: string | { id: string }): string {
+    const skillId = typeof skill === 'string' ? skill : skill.id;
     const colors: { [key: string]: string } = {
       dotnet: 'bg-purple-100 text-purple-800',
       efcore: 'bg-blue-100 text-blue-800',
@@ -88,6 +76,6 @@ export class ProjectsComponent {
       woocommerce: 'bg-purple-100 text-purple-800',
       grafana: 'bg-orange-100 text-orange-800',
     };
-    return colors[skill] || 'bg-gray-100 text-gray-800';
+    return colors[skillId] || 'bg-gray-100 text-gray-800';
   }
 }

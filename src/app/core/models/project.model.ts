@@ -6,11 +6,22 @@ export interface ProjectLinks {
   swagger?: string;
 }
 
+// Estrutura multilíngue crua (como em shared.json)
+export interface RawMultilangProject {
+  id: string;
+  title: { pt: string; en: string };
+  shortDescription: { pt: string; en: string };
+  features: { pt: string[]; en: string[] };
+  skills: string[]; // ids
+  links?: ProjectLinks;
+}
+
+// Estrutura final (resolvida para um idioma + skills expandidos)
 export interface Project {
   id: string;
-  title?: string; // vem do data.*.json
-  shortDescription?: string; // vem do data.*.json
-  features?: string[]; // vem do data.*.json
-  skills: Skill[]; // expandido a partir de shared.json
-  links?: ProjectLinks; // shared.json
+  title: string;
+  shortDescription: string;
+  features: string[];
+  skills: Skill[];
+  links?: ProjectLinks;
 }

@@ -2,88 +2,75 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { of } from 'rxjs';
 import { ProjectsComponent } from './projects.component';
 import { AssetsDataService } from '../../../core/services/data.assets.service';
+import { PortfolioDataService } from '../../../core/services/portfolio-data.service';
+import { I18nService } from '../../../core/services/i18n.service';
+import { Skill } from '../../../core/models/skill.model';
 
 describe('ProjectsComponent', () => {
   let component: ProjectsComponent;
   let fixture: ComponentFixture<ProjectsComponent>;
   let mockAssetsDataService: jasmine.SpyObj<AssetsDataService>;
 
-  const mockData = {
+  const mockLangData = {
     navbar: {
-      menu: {
-        home: 'Home',
-        about: 'About',
-        skills: 'Skills',
-        projects: 'Projects',
-        contact: 'Contact',
-      },
+      menu: { home: '', about: '', skills: '', projects: '', contact: '' },
     },
-    hero: {
-      title: 'Developer',
-      summary: 'I build things',
+    hero: { title: '', summary: '' },
+    about: { title: '', description: '' },
+    skills: { title: '', description: '' },
+    contact: {
+      title: '',
+      subtitle: '',
+      form: { name: '', email: '', message: '', send: '' },
     },
-    about: {
-      title: 'About',
-      description: 'About me',
-    },
-    skills: {
-      title: 'Skills',
-      categories: {
-        backend: 'Backend',
-        frontend: 'Frontend',
-        tools: 'Tools',
-      },
-    },
-    projects: {
+    projectsPage: {
       title: 'Projetos',
       subtitle: 'Alguns dos projetos que desenvolvi',
-      categories: {
-        professional: 'Experiência Profissional',
-        personal: 'Projetos Pessoais',
-        freelance: 'Projetos Freelance',
+      featuresTitle: 'Principais Características',
+    },
+  } as any; // simplificado para o teste
+
+  const mockShared = {
+    projects: [
+      {
+        id: 'test-project',
+        title: { pt: 'Projeto Teste', en: 'Test Project' },
+        shortDescription: { pt: 'Descrição PT', en: 'Description EN' },
+        features: { pt: ['F1'], en: ['F1'] },
+        skills: ['dotnet'],
+        links: { github: 'https://example.com' },
       },
-      highlightsTitles: {
-        professional: 'Principais Contribuições:',
-        personal: 'Funcionalidades Principais:',
-        freelance: 'Principais Entregas:',
-      },
-      professional: [
-        {
-          id: 'test-project',
-          title: 'Projeto Teste',
-          description: 'Descrição do projeto teste',
-          technologies: ['.NET', 'Angular'],
-        },
-      ],
-      personal: [],
-      freelance: [],
-    },
-    experience: {
-      title: 'Experience',
-      corporate: 'Corporate',
-      freelance: 'Freelance',
-    },
-    education: {
-      title: 'Education',
-    },
-    contact: {
-      title: 'Contact',
-      subtitle: 'Get in touch',
-      form: {
-        name: 'Name',
-        email: 'Email',
-        message: 'Message',
-        send: 'Send',
-      },
-    },
-  };
+    ],
+    skills: [
+      {
+        id: 'dotnet',
+        name: '.NET',
+        type: 'backend',
+        svg: { url: 'icon.svg' },
+      } as Skill,
+    ],
+    personal: { name: 'Nome', brand: 'brand', githubUsername: 'user' },
+    links: {},
+    contact: { email: 'e', whatsapp: 'w' },
+    certifications: [],
+  } as any;
 
   beforeEach(async () => {
-    const spy = jasmine.createSpyObj('AssetsDataService', ['getData$']);
+    const assetsSpy = jasmine.createSpyObj('AssetsDataService', ['getData$']);
+    const portfolioSpy = jasmine.createSpyObj('PortfolioDataService', [
+      'getProjects',
+    ]);
+    const i18nSpy = jasmine.createSpyObj('I18nService', [], {
+      lang$: of('pt-BR'),
+    });
 
     await TestBed.configureTestingModule({
       imports: [ProjectsComponent],
-      providers: [{ provide: AssetsDataService, useValue: spy }],
+      providers: [
+        { provide: AssetsDataService, useValue: assetsSpy },
+        { provide: PortfolioDataService, useValue: portfolioSpy },
+        { provide: I18nService, useValue: i18nSpy },
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ProjectsComponent);
@@ -91,24 +78,40 @@ describe('ProjectsComponent', () => {
     mockAssetsDataService = TestBed.inject(
       AssetsDataService
     ) as jasmine.SpyObj<AssetsDataService>;
-    mockAssetsDataService.getData$.and.returnValue(of(mockData));
+    mockAssetsDataService.getData$.and.returnValue(of(mockLangData));
+    const portfolioMock = TestBed.inject(
+      PortfolioDataService
+    ) as jasmine.SpyObj<PortfolioDataService>;
+    portfolioMock.getProjects.and.returnValue(
+      of(
+        (mockShared.projects as any[]).map((p: any) => ({
+          id: p.id,
+          title: p.title.pt,
+          shortDescription: p.shortDescription.pt,
+          features: p.features.pt,
+          skills: mockShared.skills,
+          links: p.links,
+        }))
+      )
+    );
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should load projects data', () => {
+  it('should load projects data', (done) => {
     fixture.detectChanges();
     component.vm$.subscribe((vm) => {
       expect(vm.title).toBe('Projetos');
       expect(vm.subtitle).toBe('Alguns dos projetos que desenvolvi');
-      expect(vm.professional.length).toBe(1);
+      expect(vm.projects.length).toBe(1);
+      done();
     });
   });
 
   it('should get technology color', () => {
-    const color = component.getTechnologyColor('.NET');
+    const color = component.getTechnologyColor({ id: 'dotnet' });
     expect(color).toBe('bg-purple-100 text-purple-800');
   });
 

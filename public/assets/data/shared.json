@@ -19,6 +19,28 @@
   "projects": [
     {
       "id": "popculturemashup",
+      "title": {
+        "pt": "PopCultureMashup - API de Recomendação Cross-Media",
+        "en": "PopCultureMashup - Cross-Media Recommendation API"
+      },
+      "shortDescription": {
+        "pt": "API que recomenda jogos e livros com base nas preferências do usuário, seguindo Clean Architecture.",
+        "en": "API that recommends games and books based on user preferences, following Clean Architecture."
+      },
+      "features": {
+        "pt": [
+          "Autenticação com JWT e Refresh Tokens",
+          "Integração resiliente com RAWG (jogos) e OpenLibrary (livros)",
+          "Recomendações cruzadas (livro → jogo e jogo → livro)",
+          "Containerização com Docker Compose"
+        ],
+        "en": [
+          "Authentication with JWT and Refresh Tokens",
+          "Resilient integration with RAWG (games) and OpenLibrary (books)",
+          "Cross recommendations (book → game and game → book)",
+          "Containerization with Docker Compose"
+        ]
+      },
       "skills": ["dotnet", "efcore", "sqlserver", "docker"],
       "links": {
         "github": "https://github.com/atilao4501/PopCultureMashup"
@@ -26,6 +48,26 @@
     },
     {
       "id": "pairprogress",
+      "title": {
+        "pt": "PairProgress - Aplicativo de Produtividade (Full Stack)",
+        "en": "PairProgress - Productivity App (Full Stack)"
+      },
+      "shortDescription": {
+        "pt": "Aplicação de produtividade com backend .NET e frontend Angular.",
+        "en": "Productivity app with .NET backend and Angular frontend."
+      },
+      "features": {
+        "pt": [
+          "API REST para tarefas e sessões de pareamento",
+          "Frontend em Angular com deploy estático",
+          "Integração com Swagger para exploração da API"
+        ],
+        "en": [
+          "REST API for tasks and pair programming sessions",
+          "Angular frontend with static deployment",
+          "Swagger integration for API exploration"
+        ]
+      },
       "skills": ["dotnet", "angular", "sqlserver"],
       "links": {
         "github": "https://github.com/atilao4501/PairProgress.Backend",
@@ -35,6 +77,26 @@
     },
     {
       "id": "andreia-ferreira-clinic",
+      "title": {
+        "pt": "Andreia Ferreira Clinic - API de Agendamento",
+        "en": "Andreia Ferreira Clinic - Scheduling API"
+      },
+      "shortDescription": {
+        "pt": "API REST para agendar e gerenciar consultas de clínica.",
+        "en": "REST API to schedule and manage clinic appointments."
+      },
+      "features": {
+        "pt": [
+          "CRUD de pacientes e consultas",
+          "Camadas separadas para domínio e infraestrutura",
+          "Pronta para servir clientes web/mobile"
+        ],
+        "en": [
+          "CRUD for patients and appointments",
+          "Separated layers for domain and infrastructure",
+          "Ready to serve web/mobile clients"
+        ]
+      },
       "skills": ["dotnet", "efcore", "sqlserver", "docker"],
       "links": {
         "github": "https://github.com/atilao4501/AndreiaFerreiraClinica"
@@ -42,6 +104,26 @@
     },
     {
       "id": "invillia-voucher-omnichannel",
+      "title": {
+        "pt": "Voucher Omnichannel (Grupo Casas Bahia)",
+        "en": "Omnichannel Voucher (Casas Bahia Group)"
+      },
+      "shortDescription": {
+        "pt": "Permite que um único voucher seja utilizado em todos os canais de venda (app, web, etc.).",
+        "en": "Allows a single voucher to be used across all sales channels (app, web, etc.)."
+      },
+      "features": {
+        "pt": [
+          "Microsserviços distribuídos para emissão e validação de vouchers",
+          "Cache de baixa latência para acelerar resgates",
+          "Observabilidade com métricas e logs"
+        ],
+        "en": [
+          "Distributed microservices for voucher issuance and validation",
+          "Low-latency cache to speed up redemptions",
+          "Observability with metrics and logs"
+        ]
+      },
       "skills": [
         "dotnet",
         "redis",
@@ -53,6 +135,26 @@
     },
     {
       "id": "invillia-banking-integrations",
+      "title": {
+        "pt": "Integrações Bancárias (Bradesco & Itaú)",
+        "en": "Banking Integrations (Bradesco & Itaú)"
+      },
+      "shortDescription": {
+        "pt": "Integrações seguras e resilientes entre sistemas de varejo e grandes bancos brasileiros.",
+        "en": "Secure and resilient integrations between retail systems and major Brazilian banks."
+      },
+      "features": {
+        "pt": [
+          "Mensageria assíncrona para fluxos confiáveis",
+          "Reforço de segurança com autenticação baseada em tokens",
+          "Circuit breakers e políticas de retry"
+        ],
+        "en": [
+          "Asynchronous messaging for reliable flows",
+          "Enhanced security with token-based authentication",
+          "Circuit breakers and retry policies"
+        ]
+      },
       "skills": [
         "dotnet",
         "apachekafka",
@@ -64,6 +166,26 @@
     },
     {
       "id": "invillia-cobranded-card",
+      "title": {
+        "pt": "API de Criação de Cartão Co-branded",
+        "en": "Co-branded Card Creation API"
+      },
+      "shortDescription": {
+        "pt": "Serviço que gerencia o ciclo de vida de cartões co-branded (Casas Bahia + bancos).",
+        "en": "Service that manages the lifecycle of co-branded cards (Casas Bahia + banks)."
+      },
+      "features": {
+        "pt": [
+          "Onboarding de parceiros e fluxos de emissão de cartões",
+          "Trilhas de auditoria e logging estruturado",
+          "Arquitetura de microsserviços escalável"
+        ],
+        "en": [
+          "Partner onboarding and card issuance flows",
+          "Audit trails and structured logging",
+          "Scalable microservices architecture"
+        ]
+      },
       "skills": [
         "dotnet",
         "apachekafka",
@@ -75,6 +197,28 @@
     },
     {
       "id": "gav-portal-cliente",
+      "title": {
+        "pt": "GAV Resorts - Portal do Cliente (Backend)",
+        "en": "GAV Resorts - Customer Portal (Backend)"
+      },
+      "shortDescription": {
+        "pt": "Microsserviços para autoatendimento de clientes (faturas, extratos e agendamentos).",
+        "en": "Microservices for customer self-service (invoices, statements, and scheduling)."
+      },
+      "features": {
+        "pt": [
+          "APIs RESTful de faturamento e extratos",
+          "Migração de SQL Server para PostgreSQL",
+          "Cache com Redis para reduzir latência",
+          "Containerização para padronizar ambientes"
+        ],
+        "en": [
+          "RESTful APIs for billing and statements",
+          "Migration from SQL Server to PostgreSQL",
+          "Redis cache to reduce latency",
+          "Containerization for standardized environments"
+        ]
+      },
       "skills": [
         "dotnet",
         "efcore",
@@ -86,10 +230,48 @@
     },
     {
       "id": "ecosync",
+      "title": {
+        "pt": "EcoSync - API de Monitoramento Ambiental",
+        "en": "EcoSync - Environmental Monitoring API"
+      },
+      "shortDescription": {
+        "pt": "API conceitual para ingestão e processamento de dados de sensores ambientais.",
+        "en": "Conceptual API for ingesting and processing environmental sensor data."
+      },
+      "features": {
+        "pt": [
+          "Endpoints REST para receber telemetria",
+          "Pipeline de validação e normalização de dados"
+        ],
+        "en": [
+          "REST endpoints to receive telemetry",
+          "Data validation and normalization pipeline"
+        ]
+      },
       "skills": ["dotnet", "aspnetcore"]
     },
     {
       "id": "m-adriane-ecommerce",
+      "title": {
+        "pt": "M.Adriane Joias - Loja Virtual",
+        "en": "M.Adriane Jewelry - E-commerce Store"
+      },
+      "shortDescription": {
+        "pt": "Implementação completa de loja virtual (domínio, tema e pagamentos).",
+        "en": "Full implementation of e-commerce store (domain, theme, and payments)."
+      },
+      "features": {
+        "pt": [
+          "Configuração de domínio e SSL",
+          "Catálogo e checkout",
+          "Integração com meios de pagamento"
+        ],
+        "en": [
+          "Domain and SSL setup",
+          "Catalog and checkout",
+          "Payment integration"
+        ]
+      },
       "skills": ["wordpress", "woocommerce"],
       "links": {
         "site": "https://madriane.com.br"
@@ -97,6 +279,21 @@
     },
     {
       "id": "arte-doce-amigurumis",
+      "title": {
+        "pt": "Arte Doce Amigurumis - Loja Online",
+        "en": "Arte Doce Amigurumis - Online Store"
+      },
+      "shortDescription": {
+        "pt": "Canal de vendas para amigurumis artesanais com catálogo e pagamentos configurados.",
+        "en": "Sales channel for handcrafted amigurumis with catalog and payment setup."
+      },
+      "features": {
+        "pt": [
+          "Configuração de catálogo de produtos",
+          "Configuração de meios de pagamento"
+        ],
+        "en": ["Product catalog setup", "Payment setup"]
+      },
       "skills": ["wordpress", "woocommerce"],
       "links": {
         "site": "https://artedoce.fivecard.com.br"

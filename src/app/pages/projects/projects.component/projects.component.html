@@ -29,16 +29,13 @@
           </ul>
         </div>
 
-        <div
-          class="technologies"
-          *ngIf="project.skills && project.skills.length > 0"
-        >
+        <div class="technologies" *ngIf="project.skills?.length">
           <span
             *ngFor="let skill of project.skills"
             class="tech-tag"
             [ngClass]="getTechnologyColor(skill)"
           >
-            {{ skill }}
+            {{ skill.name }}
           </span>
         </div>
 
