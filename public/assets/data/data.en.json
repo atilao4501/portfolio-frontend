@@ -69,9 +69,9 @@
   },
 
   "projectsPage": {
-    "title": "Meus Projetos",
-    "subtitle": "Uma seleção dos projetos que desenvolvi ao longo da minha carreira",
-    "featuresTitle": "Principais Características"
+    "title": "My Projects",
+    "subtitle": "A selection of projects I've developed throughout my career",
+    "featuresTitle": "Key Features"
   },
 
   "projects": [
@@ -178,8 +178,8 @@
   ],
 
   "skills": {
-    "title": "Habilidades Técnicas",
-    "description": "Algumas das principais tecnologias e ferramentas que utilizo no dia a dia."
+    "title": "Technical Skills",
+    "description": "Some of the main technologies and tools I use daily."
   },
 
   "contact": {
