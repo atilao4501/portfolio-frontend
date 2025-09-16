@@ -43,7 +43,8 @@
       },
       "skills": ["dotnet", "efcore", "sqlserver", "docker"],
       "links": {
-        "github": "https://github.com/atilao4501/PopCultureMashup"
+        "github": "https://github.com/atilao4501/PopCultureMashup",
+        "swagger": "http://popculturemashup.runasp.net/swagger/index.html"
       }
     },
     {
