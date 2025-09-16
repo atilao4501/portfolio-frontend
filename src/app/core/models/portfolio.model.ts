@@ -48,11 +48,7 @@ export interface SharedData {
     issuer: string;
     year: string;
   }[];
-  skills: {
-    backend: { name: string; level: string }[];
-    frontend: { name: string; level: string }[];
-    tools: { name: string; level: string }[];
-  };
+  skills: Record<string, any[]>;
 }
 
 export interface NavbarData {
@@ -88,11 +84,6 @@ export interface SkillsData {
     backend: string;
     frontend: string;
     tools: string;
-  };
-  levels: {
-    beginner: string;
-    intermediate: string;
-    advanced: string;
   };
 }
 

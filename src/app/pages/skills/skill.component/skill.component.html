@@ -18,10 +18,9 @@
               loading="lazy"
               height="40"
             />
-            <div class="skill-text">
-              <h3 class="skill-name">{{ skill.name }}</h3>
-              <p class="skill-meta">{{ skill.type }} • {{ skill.level }}</p>
-            </div>
+            <h3 class="skill-name" [class.long-name]="skill.name.length > 12">
+              {{ skill.name }}
+            </h3>
           </div>
         </div>
       </div>

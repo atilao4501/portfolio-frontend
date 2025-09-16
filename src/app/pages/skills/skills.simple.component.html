@@ -1,0 +1,9 @@
+<section class="skills-grid">
+  <div class="skill" *ngFor="let s of skills$ | async">
+    <img [src]="s.svg.url" [alt]="s.name" height="32" loading="lazy" />
+    <div class="meta">
+      <strong>{{ s.name }}</strong>
+      <small>• {{ s.type }}</small>
+    </div>
+  </div>
+</section>

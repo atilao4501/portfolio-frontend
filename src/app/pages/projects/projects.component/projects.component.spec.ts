@@ -33,11 +33,6 @@ describe('ProjectsComponent', () => {
         frontend: 'Frontend',
         tools: 'Tools',
       },
-      levels: {
-        beginner: 'Beginner',
-        intermediate: 'Intermediate',
-        advanced: 'Advanced',
-      },
     },
     projects: {
       title: 'Projetos',

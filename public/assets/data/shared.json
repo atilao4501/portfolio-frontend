@@ -148,16 +148,14 @@
         "id": "dotnet",
         "name": ".NET",
         "type": "backend",
-        "level": "advanced",
         "svg": {
-          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnet/dotnet-original.svg"
+          "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"
         }
       },
       {
         "id": "csharp",
         "name": "C#",
         "type": "backend",
-        "level": "advanced",
         "svg": {
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
         }
@@ -166,7 +164,6 @@
         "id": "efcore",
         "name": "Entity Framework Core",
         "type": "backend",
-        "level": "advanced",
         "svg": {
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"
         }
@@ -175,7 +172,6 @@
         "id": "aspnetcore",
         "name": "ASP.NET Core",
         "type": "backend",
-        "level": "advanced",
         "svg": {
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"
         }
@@ -186,7 +182,6 @@
         "id": "sqlserver",
         "name": "SQL Server",
         "type": "database",
-        "level": "advanced",
         "svg": {
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
         }
@@ -195,7 +190,6 @@
         "id": "postgresql",
         "name": "PostgreSQL",
         "type": "database",
-        "level": "intermediate",
         "svg": {
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
         }
@@ -204,7 +198,6 @@
         "id": "mongodb",
         "name": "MongoDB",
         "type": "database",
-        "level": "intermediate",
         "svg": {
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
         }
@@ -213,7 +206,6 @@
         "id": "redis",
         "name": "Redis",
         "type": "database",
-        "level": "intermediate",
         "svg": {
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
         }
@@ -224,7 +216,6 @@
         "id": "angular",
         "name": "Angular",
         "type": "frontend",
-        "level": "intermediate",
         "svg": {
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
         }
@@ -233,7 +224,6 @@
         "id": "typescript",
         "name": "TypeScript",
         "type": "frontend",
-        "level": "intermediate",
         "svg": {
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
         }
@@ -242,7 +232,6 @@
         "id": "javascript",
         "name": "JavaScript",
         "type": "frontend",
-        "level": "intermediate",
         "svg": {
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
         }
@@ -251,7 +240,6 @@
         "id": "htmlcss",
         "name": "HTML/CSS",
         "type": "frontend",
-        "level": "advanced",
         "svg": {
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
         }
@@ -260,7 +248,6 @@
         "id": "wordpress",
         "name": "WordPress",
         "type": "frontend",
-        "level": "intermediate",
         "svg": {
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg"
         }
@@ -269,7 +256,6 @@
         "id": "woocommerce",
         "name": "WooCommerce",
         "type": "frontend",
-        "level": "intermediate",
         "svg": {
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/woocommerce/woocommerce-original.svg"
         }
@@ -280,7 +266,6 @@
         "id": "docker",
         "name": "Docker",
         "type": "devops",
-        "level": "intermediate",
         "svg": {
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
         }
@@ -289,7 +274,6 @@
         "id": "kubernetes",
         "name": "Kubernetes",
         "type": "devops",
-        "level": "beginner",
         "svg": {
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
         }
@@ -298,7 +282,6 @@
         "id": "nginx",
         "name": "NGINX",
         "type": "devops",
-        "level": "beginner",
         "svg": {
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg"
         }
@@ -307,7 +290,6 @@
         "id": "githubactions",
         "name": "GitHub Actions",
         "type": "devops",
-        "level": "intermediate",
         "svg": {
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-plain.svg"
         }
@@ -318,7 +300,6 @@
         "id": "apachekafka",
         "name": "Apache Kafka",
         "type": "messaging",
-        "level": "intermediate",
         "svg": {
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg"
         }
@@ -329,7 +310,6 @@
         "id": "grafana",
         "name": "Grafana",
         "type": "observability",
-        "level": "beginner",
         "svg": {
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg"
         }
@@ -338,7 +318,6 @@
         "id": "prometheus",
         "name": "Prometheus",
         "type": "observability",
-        "level": "beginner",
         "svg": {
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg"
         }
@@ -349,7 +328,6 @@
         "id": "git",
         "name": "Git",
         "type": "tool",
-        "level": "advanced",
         "svg": {
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
         }
@@ -358,7 +336,6 @@
         "id": "azure",
         "name": "Azure",
         "type": "tool",
-        "level": "beginner",
         "svg": {
           "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
         }
