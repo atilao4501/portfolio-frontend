@@ -136,6 +136,16 @@
   "contact": {
     "title": "Entre em Contato",
     "subtitle": "Vamos trabalhar juntos no seu próximo projeto",
+    "description": "Entre em contato através do WhatsApp ou email. Respondo rapidamente!",
+    "contactMethods": {
+      "email": "E-mail",
+      "whatsapp": "WhatsApp"
+    },
+    "socialTitle": "Redes Sociais",
+    "socialLinks": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
     "form": {
       "name": "Nome",
       "email": "E-mail",

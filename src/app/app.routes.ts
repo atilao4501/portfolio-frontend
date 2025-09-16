@@ -49,13 +49,13 @@ export const routes: Routes = [
   //       ),
   //     title: 'Stack',
   //   },
-  //   {
-  //     path: 'contact',
-  //     loadComponent: () =>
-  //       import('./pages/contact/contact.component').then(
-  //         (m) => m.ContactComponent
-  //       ),
-  //     title: 'Contact',
-  //   },
+  {
+    path: 'contact',
+    loadComponent: () =>
+      import('./pages/contact/contact.component/contact.component').then(
+        (m) => m.ContactComponent
+      ),
+    title: 'Contact',
+  },
   { path: '**', redirectTo: 'Home' },
 ];

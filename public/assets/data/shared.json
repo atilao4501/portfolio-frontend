@@ -1,7 +1,7 @@
 {
   "personal": {
     "name": "Átila F. Alcântara",
-    "brand": "Átila F. Alcântara",
+    "brand": "atilao4501",
     "githubUsername": "atilao4501"
   },
 
@@ -13,7 +13,7 @@
 
   "contact": {
     "email": "atilafa2012@hotmail.com",
-    "whatsapp": "+5575999999999"
+    "whatsapp": "+5562999001030"
   },
 
   "projects": [
@@ -101,38 +101,6 @@
       "links": {
         "site": "https://artedoce.fivecard.com.br"
       }
-    }
-  ],
-
-  "corporate": [
-    {
-      "id": "invillia-bradesco",
-      "skills": [
-        "dotnet",
-        "mongodb",
-        "postgresql",
-        "apachekafka",
-        "redis",
-        "kubernetes"
-      ]
-    },
-    {
-      "id": "gav",
-      "company": "GAV Resorts",
-      "skills": ["dotnet", "sqlserver", "postgresql", "redis"]
-    }
-  ],
-
-  "freelance": [
-    { "id": "adriane-joias", "name": "M. Adriane Joias" },
-    { "id": "arte-doce", "name": "Arte Doce Amigurumis" }
-  ],
-
-  "education": [
-    {
-      "id": "faseb-psychology",
-      "institution": "FASEB",
-      "period": "Atual"
     }
   ],
 

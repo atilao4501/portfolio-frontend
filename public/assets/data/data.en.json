@@ -15,124 +15,137 @@
   },
 
   "about": {
-    "title": "About Me",
-    "description": "Passionate backend developer specializing in .NET technologies. I love creating robust APIs and scalable solutions that solve real-world problems."
+    "title": "Sobre Mim",
+    "description": "Desenvolvedor backend apaixonado por tecnologias .NET. Adoro criar APIs robustas e soluções escaláveis que resolvem problemas do mundo real."
   },
 
   "projectsPage": {
-    "title": "My Projects",
-    "subtitle": "A selection of projects I've developed throughout my career",
-    "featuresTitle": "Key Features"
+    "title": "Meus Projetos",
+    "subtitle": "Uma seleção dos projetos que desenvolvi ao longo da minha carreira",
+    "featuresTitle": "Principais Características"
   },
 
   "projects": [
     {
       "id": "popculturemashup",
-      "title": "PopCultureMashup - Cross-Media Recommendation API",
-      "shortDescription": "API that recommends games and books based on user preferences, following Clean Architecture.",
+      "title": "PopCultureMashup - API de Recomendação Cross-Media",
+      "shortDescription": "API que recomenda jogos e livros com base nas preferências do usuário, seguindo Clean Architecture.",
       "features": [
-        "Authentication with JWT and Refresh Tokens",
-        "Resilient integration with RAWG (games) and OpenLibrary (books)",
-        "Cross recommendations (book → game and game → book)",
-        "Containerization with Docker Compose"
+        "Autenticação com JWT e Refresh Tokens",
+        "Integração resiliente com RAWG (jogos) e OpenLibrary (livros)",
+        "Recomendações cruzadas (livro → jogo e jogo → livro)",
+        "Containerização com Docker Compose"
       ]
     },
     {
       "id": "pairprogress",
-      "title": "PairProgress - Productivity App (Full Stack)",
-      "shortDescription": "Productivity application with .NET backend and Angular frontend.",
+      "title": "PairProgress - Aplicativo de Produtividade (Full Stack)",
+      "shortDescription": "Aplicação de produtividade com backend .NET e frontend Angular.",
       "features": [
-        "REST API for tasks and pairing sessions",
-        "Angular frontend with static deploy",
-        "Swagger integration for API exploration"
+        "API REST para tarefas e sessões de pareamento",
+        "Frontend em Angular com deploy estático",
+        "Integração com Swagger para exploração da API"
       ]
     },
     {
       "id": "andreia-ferreira-clinic",
-      "title": "Andreia Ferreira Clinic - Scheduling API",
-      "shortDescription": "REST API to schedule and manage clinic appointments.",
+      "title": "Andreia Ferreira Clinic - API de Agendamento",
+      "shortDescription": "API REST para agendar e gerenciar consultas de clínica.",
       "features": [
-        "CRUD for patients and appointments",
-        "Separated layers for domain and infrastructure",
-        "Ready to serve web/mobile clients"
+        "CRUD de pacientes e consultas",
+        "Camadas separadas para domínio e infraestrutura",
+        "Pronta para servir clientes web/mobile"
       ]
     },
     {
       "id": "invillia-voucher-omnichannel",
       "title": "Voucher Omnichannel (Grupo Casas Bahia)",
-      "shortDescription": "Enables a single voucher to be used across all sales channels (app, web, etc.).",
+      "shortDescription": "Permite que um único voucher seja utilizado em todos os canais de venda (app, web, etc.).",
       "features": [
-        "Distributed microservices for voucher issuance and validation",
-        "Low-latency cache to speed up redemption",
-        "Observability with metrics and logs"
+        "Microsserviços distribuídos para emissão e validação de vouchers",
+        "Cache de baixa latência para acelerar resgates",
+        "Observabilidade com métricas e logs"
       ]
     },
     {
       "id": "invillia-banking-integrations",
-      "title": "Banking Integrations (Bradesco & Itaú)",
-      "shortDescription": "Secure, resilient integrations between retailer systems and major Brazilian banks.",
+      "title": "Integrações Bancárias (Bradesco & Itaú)",
+      "shortDescription": "Integrações seguras e resilientes entre sistemas de varejo e grandes bancos brasileiros.",
       "features": [
-        "Async messaging for reliable flows",
-        "Security hardening with token-based authentication",
-        "Circuit breakers and retry policies"
+        "Mensageria assíncrona para fluxos confiáveis",
+        "Reforço de segurança com autenticação baseada em tokens",
+        "Circuit breakers e políticas de retry"
       ]
     },
     {
       "id": "invillia-cobranded-card",
-      "title": "Co-branded Credit Card Creation API",
-      "shortDescription": "Service that manages the lifecycle of co-branded credit cards (Casas Bahia + banks).",
+      "title": "API de Criação de Cartão Co-branded",
+      "shortDescription": "Serviço que gerencia o ciclo de vida de cartões co-branded (Casas Bahia + bancos).",
       "features": [
-        "Partner onboarding and card issuance workflows",
-        "Audit trails and structured logging",
-        "Scalable microservice architecture"
+        "Onboarding de parceiros e fluxos de emissão de cartões",
+        "Trilhas de auditoria e logging estruturado",
+        "Arquitetura de microsserviços escalável"
       ]
     },
     {
       "id": "gav-portal-cliente",
-      "title": "GAV Resorts - Customer Portal (Backend)",
-      "shortDescription": "Microservices for customer self-service (invoices, statements, and bookings).",
+      "title": "GAV Resorts - Portal do Cliente (Backend)",
+      "shortDescription": "Microsserviços para autoatendimento de clientes (faturas, extratos e agendamentos).",
       "features": [
-        "RESTful APIs for billing and statements",
-        "Migration from SQL Server to PostgreSQL",
-        "Caching with Redis to reduce latency",
-        "Containerization to standardize environments"
+        "APIs RESTful de faturamento e extratos",
+        "Migração de SQL Server para PostgreSQL",
+        "Cache com Redis para reduzir latência",
+        "Containerização para padronizar ambientes"
       ]
     },
     {
       "id": "ecosync",
-      "title": "EcoSync - Environmental Monitoring API",
-      "shortDescription": "Concept API to ingest and process sensor data for environmental monitoring.",
+      "title": "EcoSync - API de Monitoramento Ambiental",
+      "shortDescription": "API conceitual para ingestão e processamento de dados de sensores ambientais.",
       "features": [
-        "REST endpoints to receive telemetry",
-        "Data validation and normalization pipeline"
+        "Endpoints REST para receber telemetria",
+        "Pipeline de validação e normalização de dados"
       ]
     },
     {
       "id": "m-adriane-ecommerce",
-      "title": "M.Adriane Jewelry - E-commerce Store",
-      "shortDescription": "Full implementation of an e-commerce store (domain, theme, payments).",
+      "title": "M.Adriane Joias - Loja Virtual",
+      "shortDescription": "Implementação completa de loja virtual (domínio, tema e pagamentos).",
       "features": [
-        "Domain and SSL setup",
-        "Catalog and checkout configuration",
-        "Payment gateway integrations"
+        "Configuração de domínio e SSL",
+        "Catálogo e checkout",
+        "Integração com meios de pagamento"
       ]
     },
     {
       "id": "arte-doce-amigurumis",
-      "title": "Arte Doce Amigurumis - Online Store",
-      "shortDescription": "Sales channel for handcrafted amigurumis with product catalog and payment setup.",
-      "features": ["Product catalog configuration", "Payment methods setup"]
+      "title": "Arte Doce Amigurumis - Loja Online",
+      "shortDescription": "Canal de vendas para amigurumis artesanais com catálogo e pagamentos configurados.",
+      "features": [
+        "Configuração de catálogo de produtos",
+        "Configuração de meios de pagamento"
+      ]
     }
   ],
 
   "skills": {
-    "title": "Technical Skills",
-    "description": "Some of the main technologies and tools I use on a daily basis."
+    "title": "Habilidades Técnicas",
+    "description": "Algumas das principais tecnologias e ferramentas que utilizo no dia a dia."
   },
 
   "contact": {
-    "title": "Get in Touch",
+    "title": "Get In Touch",
     "subtitle": "Let's work together on your next project",
+    "description": "Get in touch via WhatsApp or email. I respond quickly!",
+    "contactMethods": {
+      "email": "Email",
+      "whatsapp": "WhatsApp"
+    },
+    "socialTitle": "Social Media",
+    "socialLinks": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
     "form": {
       "name": "Name",
       "email": "Email",
