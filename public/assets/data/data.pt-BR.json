@@ -11,12 +11,61 @@
 
   "hero": {
     "title": "Desenvolvedor Backend | Cientista da Computação",
-    "summary": "Construo APIs e integrações confiáveis."
+    "summary": "Construo APIs e integrações confiáveis.",
+    "buttons": {
+      "viewResume": "Ver Currículo"
+    }
   },
 
   "about": {
     "title": "Sobre Mim",
-    "description": "Desenvolvedor backend apaixonado por tecnologias .NET. Adoro criar APIs robustas e soluções escaláveis que resolvem problemas do mundo real."
+    "description": "Desenvolvedor backend apaixonado por tecnologias .NET. Adoro criar APIs robustas e soluções escaláveis que resolvem problemas do mundo real.",
+    "longDescription": "Sou desenvolvedor backend com experiência em .NET e C#, focado em APIs escaláveis, microserviços e integração com bancos de dados relacionais e não relacionais.\n\nAtuei em projetos corporativos de grande porte, incluindo o Bradesco P2 na Invillia e o Portal do Cliente na GAV Resorts. Paralelamente, também desenvolvo soluções próprias e trabalhos freelance, como sistemas para clínicas e e-commerces em WordPress/WooCommerce.\n\nTenho familiaridade com práticas modernas de DevOps (Docker, Kubernetes, GitHub Actions), mensageria (Apache Kafka) e observabilidade (Grafana, Serilog). Busco sempre unir qualidade técnica, organização em equipe e foco em entregar valor real ao usuário.",
+    "subtitles": {
+      "backendDeveloper": "Backend Developer",
+      "dotnetDeveloper": ".NET Developer"
+    },
+    "sectionTitles": {
+      "professionalJourney": "Trajetória Profissional",
+      "highlights": "Destaques",
+      "mainTechnologies": "Tecnologias Principais",
+      "experienceAreas": "Áreas de Experiência"
+    },
+    "cta": {
+      "title": "Vamos trabalhar juntos?",
+      "description": "Estou sempre aberto a novos desafios e oportunidades de colaboração.",
+      "contactButton": "Entrar em Contato",
+      "projectsButton": "Ver Projetos"
+    },
+    "highlights": [
+      "Experiência em projetos corporativos de grande escala",
+      "Desenvolvimento de APIs escaláveis e microserviços",
+      "Integração com sistemas legados e modernos",
+      "Práticas DevOps e cultura de entrega contínua",
+      "Foco em qualidade técnica e valor para o usuário"
+    ],
+    "technologies": [
+      ".NET Core",
+      "C#",
+      "ASP.NET Core",
+      "Entity Framework",
+      "SQL Server",
+      "PostgreSQL",
+      "Docker",
+      "Kubernetes",
+      "Apache Kafka",
+      "Redis",
+      "Azure",
+      "GitHub Actions"
+    ],
+    "experience": [
+      "Desenvolvimento de APIs REST robustas e escaláveis",
+      "Arquitetura de microserviços e sistemas distribuídos",
+      "Integração com bancos relacionais e NoSQL",
+      "Implementação de práticas DevOps e CI/CD",
+      "Desenvolvimento de sistemas de mensageria",
+      "Observabilidade e monitoramento de aplicações"
+    ]
   },
 
   "projectsPage": {

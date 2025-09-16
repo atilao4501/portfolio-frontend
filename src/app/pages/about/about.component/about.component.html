@@ -1,0 +1,94 @@
+<div class="about-container" *ngIf="vm$ | async as vm">
+  <div class="about-hero">
+    <div class="about-header">
+      <h1 class="about-title">{{ vm.title }}</h1>
+      <div class="about-subtitle">
+        <span class="subtitle-accent">{{ vm.subtitles.backendDeveloper }}</span>
+        <span class="subtitle-separator">|</span>
+        <span class="subtitle-accent">{{ vm.subtitles.dotnetDeveloper }}</span>
+      </div>
+    </div>
+
+    <div class="about-intro">
+      <p class="intro-text">{{ vm.description }}</p>
+    </div>
+  </div>
+
+  <div class="about-content">
+    <div class="content-grid">
+      <!-- Professional Journey -->
+      <div class="content-card journey-card">
+        <div class="card-icon">
+          <i class="icon-briefcase">💼</i>
+        </div>
+        <h3 class="card-title">{{ vm.sectionTitles.professionalJourney }}</h3>
+        <div class="journey-content">
+          <p class="journey-description">{{ vm.longDescription }}</p>
+        </div>
+      </div>
+
+      <!-- Key Highlights -->
+      <div
+        class="content-card highlights-card"
+        *ngIf="vm.highlights.length > 0"
+      >
+        <div class="card-icon">
+          <i class="icon-star">⭐</i>
+        </div>
+        <h3 class="card-title">{{ vm.sectionTitles.highlights }}</h3>
+        <ul class="highlights-list">
+          <li class="highlight-item" *ngFor="let highlight of vm.highlights">
+            <span class="highlight-bullet">▶</span>
+            <span class="highlight-text">{{ highlight }}</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Technologies & Tools -->
+      <div class="content-card tech-card" *ngIf="vm.technologies.length > 0">
+        <div class="card-icon">
+          <i class="icon-code">⚡</i>
+        </div>
+        <h3 class="card-title">{{ vm.sectionTitles.mainTechnologies }}</h3>
+        <div class="tech-grid">
+          <span class="tech-tag" *ngFor="let tech of vm.technologies">{{
+            tech
+          }}</span>
+        </div>
+      </div>
+
+      <!-- Experience Areas -->
+      <div
+        class="content-card experience-card"
+        *ngIf="vm.experience.length > 0"
+      >
+        <div class="card-icon">
+          <i class="icon-target">🎯</i>
+        </div>
+        <h3 class="card-title">{{ vm.sectionTitles.experienceAreas }}</h3>
+        <div class="experience-list">
+          <div class="experience-item" *ngFor="let exp of vm.experience">
+            <div class="experience-marker"></div>
+            <span class="experience-text">{{ exp }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Call to Action -->
+  <div class="about-cta">
+    <div class="cta-content">
+      <h3 class="cta-title">{{ vm.cta.title }}</h3>
+      <p class="cta-description">{{ vm.cta.description }}</p>
+      <div class="cta-buttons">
+        <a routerLink="/contact" class="cta-button primary">{{
+          vm.cta.contactButton
+        }}</a>
+        <a routerLink="/projects" class="cta-button secondary">{{
+          vm.cta.projectsButton
+        }}</a>
+      </div>
+    </div>
+  </div>
+</div>

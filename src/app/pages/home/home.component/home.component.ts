@@ -10,6 +10,9 @@ interface HomeViewModel {
   summary: string;
   links: any;
   githubUsername: string;
+  buttons: {
+    viewResume: string;
+  };
 }
 
 @Component({
@@ -30,6 +33,9 @@ export class HomeComponent {
         summary: data.hero.summary,
         links: data.hero.links,
         githubUsername: data.shared?.personal?.githubUsername || 'atilao4501',
+        buttons: {
+          viewResume: data.hero.buttons?.viewResume || 'Ver Currículo',
+        },
       }))
     );
   }

@@ -11,12 +11,61 @@
 
   "hero": {
     "title": "Backend Developer | Computer Scientist",
-    "summary": "I build reliable APIs and integrations."
+    "summary": "I build reliable APIs and integrations.",
+    "buttons": {
+      "viewResume": "View Resume"
+    }
   },
 
   "about": {
-    "title": "Sobre Mim",
-    "description": "Desenvolvedor backend apaixonado por tecnologias .NET. Adoro criar APIs robustas e soluções escaláveis que resolvem problemas do mundo real."
+    "title": "About Me",
+    "description": "Backend developer passionate about .NET technologies. I love creating robust APIs and scalable solutions that solve real-world problems.",
+    "longDescription": "I am a backend developer experienced in .NET and C#, focused on scalable APIs, microservices, and integrations with both relational and non-relational databases.\n\nI have contributed to large corporate projects, including Bradesco P2 at Invillia and Client Portal at GAV Resorts. Additionally, I work on personal and freelance solutions, including clinic management systems and e-commerce platforms with WordPress/WooCommerce.\n\nMy skill set includes modern DevOps practices (Docker, Kubernetes, GitHub Actions), messaging systems (Apache Kafka), and observability tools (Grafana, Serilog). I am committed to combining technical quality, team organization, and a strong focus on delivering real value to end users.",
+    "subtitles": {
+      "backendDeveloper": "Backend Developer",
+      "dotnetDeveloper": ".NET Developer"
+    },
+    "sectionTitles": {
+      "professionalJourney": "Professional Journey",
+      "highlights": "Key Highlights",
+      "mainTechnologies": "Main Technologies",
+      "experienceAreas": "Experience Areas"
+    },
+    "cta": {
+      "title": "Let's work together?",
+      "description": "I'm always open to new challenges and collaboration opportunities.",
+      "contactButton": "Get in Touch",
+      "projectsButton": "View Projects"
+    },
+    "highlights": [
+      "Experience in large-scale corporate projects",
+      "Development of scalable APIs and microservices",
+      "Integration with legacy and modern systems",
+      "DevOps practices and continuous delivery culture",
+      "Focus on technical quality and user value"
+    ],
+    "technologies": [
+      ".NET Core",
+      "C#",
+      "ASP.NET Core",
+      "Entity Framework",
+      "SQL Server",
+      "PostgreSQL",
+      "Docker",
+      "Kubernetes",
+      "Apache Kafka",
+      "Redis",
+      "Azure",
+      "GitHub Actions"
+    ],
+    "experience": [
+      "Development of robust and scalable REST APIs",
+      "Microservices architecture and distributed systems",
+      "Integration with relational and NoSQL databases",
+      "Implementation of DevOps practices and CI/CD",
+      "Development of messaging systems",
+      "Application observability and monitoring"
+    ]
   },
 
   "projectsPage": {
