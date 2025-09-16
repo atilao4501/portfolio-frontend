@@ -8,7 +8,10 @@
   <!-- Projects Grid -->
   <section class="projects-section">
     <div class="projects-grid">
-      <div class="project-card" *ngFor="let project of vm.projects">
+      <div
+        class="project-card"
+        *ngFor="let project of vm.projects; trackBy: trackProject"
+      >
         <div class="project-header">
           <h3 class="project-title">{{ project.title }}</h3>
         </div>
@@ -23,7 +26,10 @@
         >
           <h4 class="features-title">{{ vm.featuresTitle }}</h4>
           <ul class="features-list">
-            <li *ngFor="let feature of project.features" class="feature-item">
+            <li
+              *ngFor="let feature of project.features; trackBy: trackFeature"
+              class="feature-item"
+            >
               {{ feature }}
             </li>
           </ul>
@@ -31,7 +37,7 @@
 
         <div class="technologies" *ngIf="project.skills?.length">
           <span
-            *ngFor="let skill of project.skills"
+            *ngFor="let skill of project.skills; trackBy: trackSkill"
             class="tech-tag"
             [ngClass]="skill | skillColor"
           >

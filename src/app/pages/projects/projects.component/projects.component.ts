@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { AsyncPipe, NgIf, NgFor, NgClass } from '@angular/common';
 import { Observable, combineLatest } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
@@ -21,6 +21,7 @@ interface ProjectsViewModel {
   imports: [NgIf, NgFor, NgClass, AsyncPipe, SkillColorPipe],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectsComponent {
   vm$: Observable<ProjectsViewModel>;
@@ -59,4 +60,8 @@ export class ProjectsComponent {
       window.open(url, '_blank', 'noopener noreferrer');
     }
   }
+
+  trackProject = (_: number, p: Project) => p.id;
+  trackFeature = (_: number, f: string) => f;
+  trackSkill = (_: number, s: any) => s.id || s.name;
 }

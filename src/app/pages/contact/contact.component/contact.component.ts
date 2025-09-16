@@ -1,4 +1,9 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Inject,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Observable, map } from 'rxjs';
 import {
@@ -37,6 +42,7 @@ interface ContactViewModel {
   imports: [CommonModule],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactComponent implements OnInit {
   vm$!: Observable<ContactViewModel>;

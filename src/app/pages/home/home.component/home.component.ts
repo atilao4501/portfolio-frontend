@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 import { AsyncPipe, NgIf } from '@angular/common';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
@@ -18,9 +19,10 @@ interface HomeViewModel {
 @Component({
   standalone: true,
   selector: 'app-home',
-  imports: [NgIf, AsyncPipe],
+  imports: [NgIf, AsyncPipe, NgOptimizedImage],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent {
   vm$: Observable<HomeViewModel>;

@@ -10,6 +10,25 @@ To start a local development server, run:
 ng serve
 ```
 
+## Performance
+
+O projeto aplica otimizações:
+
+- Lazy loading via `loadComponent` para páginas.
+- Change Detection `OnPush` em componentes de páginas e compartilhados.
+- Funções `trackBy` em todos os _ngFor_ principais para evitar recriação de DOM.
+- Estratégia de preloading custom baseada em prioridade (ver `app.config.ts`).
+- `NgOptimizedImage` (ngSrc) para imagens de perfil e ícones de skills/projetos com dimensões explícitas.
+- Coalescing de eventos (`provideZoneChangeDetection({ eventCoalescing: true })`).
+- Headers `<link rel="preconnect" ...>` e `dns-prefetch` no `index.html`.
+
+### Próximos passos sugeridos
+
+- Adicionar compressão/otimização de imagens (WebP/AVIF) se hospedar assets locais.
+- Configurar análise de bundle: `ng build --configuration production --stats-json` e usar `npx webpack-bundle-analyzer dist/portfolio/stats.json`.
+- Implementar caching HTTP para assets estáticos no servidor/Vercel.
+- Considerar hydration parcial / defer de scripts adicionais se forem incluídos no futuro.
+
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
 ## Code scaffolding

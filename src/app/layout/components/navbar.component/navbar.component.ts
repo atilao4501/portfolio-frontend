@@ -1,4 +1,10 @@
-import { Component, inject, OnInit, OnDestroy } from '@angular/core';
+import {
+  Component,
+  inject,
+  OnInit,
+  OnDestroy,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule, AsyncPipe } from '@angular/common';
 import { I18nService } from '../../../core/services/i18n.service';
@@ -13,6 +19,7 @@ import {
   imports: [RouterLink, RouterLinkActive, CommonModule, AsyncPipe],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent implements OnInit, OnDestroy {
   private i18n = inject(I18nService);

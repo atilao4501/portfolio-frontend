@@ -3,9 +3,11 @@
     <!-- Foto do perfil do GitHub -->
     <div class="profile-image">
       <img
-        [src]="'https://github.com/' + vm.githubUsername + '.png?size=300'"
+        ngSrc="https://github.com/{{ vm.githubUsername }}.png?size=300"
+        width="300"
+        height="300"
+        priority
         [alt]="vm.name + ' profile photo'"
-        loading="eager"
       />
     </div>
 

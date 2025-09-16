@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { AsyncPipe, NgIf, CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { map } from 'rxjs/operators';
@@ -36,6 +36,7 @@ interface AboutViewModel {
   imports: [NgIf, AsyncPipe, CommonModule, RouterLink],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutComponent {
   vm$: Observable<AboutViewModel>;

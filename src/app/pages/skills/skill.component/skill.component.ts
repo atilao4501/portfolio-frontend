@@ -1,5 +1,10 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {
+  Component,
+  OnInit,
+  Inject,
+  ChangeDetectionStrategy,
+} from '@angular/core';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Observable, map } from 'rxjs';
 import { PortfolioDataService } from '../../../core/services/portfolio-data.service';
 import { Skill, SkillType } from '../../../core/models/skill.model';
@@ -26,9 +31,10 @@ interface SkillsViewModel {
 @Component({
   selector: 'app-skill',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgOptimizedImage],
   templateUrl: './skill.component.html',
   styleUrls: ['./skill.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SkillComponent implements OnInit {
   vm$!: Observable<SkillsViewModel>;
@@ -92,4 +98,7 @@ export class SkillComponent implements OnInit {
 
     return categoryMap[categoryKey] || categoryKey;
   }
+
+  trackCategory = (_: number, c: SkillCategory) => c.title;
+  trackSkill = (_: number, s: SkillItem) => s.name;
 }

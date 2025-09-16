@@ -7,16 +7,22 @@
 
     <!-- Categories -->
     <div class="skills-categories">
-      <div class="skill-category" *ngFor="let category of vm.categories">
+      <div
+        class="skill-category"
+        *ngFor="let category of vm.categories; trackBy: trackCategory"
+      >
         <h2 class="category-title">{{ category.title }}</h2>
 
         <div class="skills-grid">
-          <div class="skill-card" *ngFor="let skill of category.skills">
+          <div
+            class="skill-card"
+            *ngFor="let skill of category.skills; trackBy: trackSkill"
+          >
             <img
-              [src]="skill.svg"
-              [alt]="skill.name"
-              loading="lazy"
+              ngSrc="{{ skill.svg }}"
+              width="40"
               height="40"
+              [alt]="skill.name"
             />
             <h3 class="skill-name" [class.long-name]="skill.name.length > 12">
               {{ skill.name }}

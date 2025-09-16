@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NgFor, NgIf, AsyncPipe } from '@angular/common';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { NgFor, NgIf, AsyncPipe, NgOptimizedImage } from '@angular/common';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { PortfolioDataService } from '../../core/services/portfolio-data.service';
@@ -9,21 +9,24 @@ import { I18nService } from '../../core/services/i18n.service';
 @Component({
   selector: 'app-projects-simple',
   standalone: true,
-  imports: [NgFor, NgIf, AsyncPipe],
+  imports: [NgFor, NgIf, AsyncPipe, NgOptimizedImage],
   template: `
-    <section *ngFor="let p of projects$ | async" class="project-item">
+    <section
+      *ngFor="let p of projects$ | async; trackBy: trackProject"
+      class="project-item"
+    >
       <h3>{{ p.title }}</h3>
       <p>{{ p.shortDescription }}</p>
       <ul *ngIf="p.features?.length">
-        <li *ngFor="let f of p.features">{{ f }}</li>
+        <li *ngFor="let f of p.features; trackBy: trackFeature">{{ f }}</li>
       </ul>
       <div class="skills" *ngIf="p.skills?.length">
         <img
-          *ngFor="let s of p.skills"
-          [src]="s.svg.url"
-          [alt]="s.name"
+          *ngFor="let s of p.skills; trackBy: trackSkill"
+          ngSrc="{{ s.svg.url }}"
+          width="24"
           height="24"
-          loading="lazy"
+          [alt]="s.name"
         />
       </div>
       <p class="links">
@@ -56,6 +59,7 @@ import { I18nService } from '../../core/services/i18n.service';
       }
     `,
   ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectsSimpleComponent {
   projects$!: Observable<Project[]>;
@@ -65,4 +69,8 @@ export class ProjectsSimpleComponent {
       switchMap((lang: string) => this.data.getProjects(lang as any))
     );
   }
+
+  trackProject = (_: number, p: Project) => p.id;
+  trackFeature = (_: number, f: string) => f;
+  trackSkill = (_: number, s: any) => s.id || s.name;
 }
